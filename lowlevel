@@ -1,0 +1,447 @@
+<html lang="ko"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, viewport-fit=cover, initial-scale=1.0, minimum-scale=0, maximum-scale=10,user-scalable=yes">
+    
+    
+    <meta name="csrf-token" content="KKhqs1YO9xqJSHPoFsRqXDpPEUsD0DQwWcn2nzeO">
+    
+    
+    <link rel="canonical" href="https://krnumquiz.clickn.co.kr/pages/lowlevel">
+    
+    
+    <meta property="og:title" content="한국어 수 표현 퀴즈">
+    <title>한국어 수 표현 퀴즈</title>
+    
+    
+    
+    
+    
+    
+    <link rel="shortcut icon" href="/file/311019131">
+    
+    
+    
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://krnumquiz.clickn.co.kr/css/lib.css?v=20221110">
+    <link rel="stylesheet" type="text/css" href="https://krnumquiz.clickn.co.kr/vendors/Slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="https://krnumquiz.clickn.co.kr/vendors/Swiper/swiper.min.css"><!-- Swiper js-->
+    <link rel="stylesheet" type="text/css" href="https://krnumquiz.clickn.co.kr/vendors/Fontawesome/css/froala.css"><!-- Froala 에 Font Awesome 서비스하기 위함 -->
+    <link rel="stylesheet" type="text/css" href="https://krnumquiz.clickn.co.kr/vendors/Fontawesome/css/all.min.css"><!-- Font Awesome -->
+    <link rel="stylesheet" type="text/css" href="https://krnumquiz.clickn.co.kr/vendors/Froala/css/froala_editor.pkgd.css"><!-- Froala -->
+    <link rel="stylesheet" type="text/css" href="https://krnumquiz.clickn.co.kr/vendors/Datepicker/css/datepicker.css"><!-- datapicker -->
+    <link rel="stylesheet" type="text/css" href="https://krnumquiz.clickn.co.kr/vendors/Dropzone/css/dropzone.min.css"><!-- Dropzone -->
+    <link rel="stylesheet" type="text/css" href="https://krnumquiz.clickn.co.kr/css/animation.css?v=20221110">
+    <link rel="stylesheet" type="text/css" href="https://krnumquiz.clickn.co.kr/css/skin_common.css?v=20221110">
+    
+    <link rel="stylesheet" type="text/css" href="https://storage.clickn.co.kr//css/modules/module_common.css?v=20221110">
+    <link rel="stylesheet" type="text/css" href="https://storage.clickn.co.kr//css/modules/module_header.css?v=20221110">
+    <link rel="stylesheet" type="text/css" href="https://storage.clickn.co.kr//css/modules/module_board.css?v=20221110">
+    <link rel="stylesheet" type="text/css" href="https://storage.clickn.co.kr//css/modules/module_boardRecent.css?v=20221110">
+    <link rel="stylesheet" type="text/css" href="https://storage.clickn.co.kr//css/modules/module_contents.css?v=20221110">
+    <link rel="stylesheet" type="text/css" href="https://storage.clickn.co.kr//css/modules/module_form.css?v=20221110">
+    <link rel="stylesheet" type="text/css" href="https://storage.clickn.co.kr//css/modules/module_image.css?v=20221110">
+    <link rel="stylesheet" type="text/css" href="https://storage.clickn.co.kr//css/modules/module_layout.css?v=20221110">
+    <link rel="stylesheet" type="text/css" href="https://storage.clickn.co.kr//css/modules/module_line.css?v=20221110">
+    <link rel="stylesheet" type="text/css" href="https://storage.clickn.co.kr//css/modules/module_map.css?v=20221110">
+    <link rel="stylesheet" type="text/css" href="https://storage.clickn.co.kr//css/modules/module_slide.css?v=20221110">
+    <link rel="stylesheet" type="text/css" href="https://storage.clickn.co.kr//css/modules/module_text.css?v=20221110">
+    <link rel="stylesheet" type="text/css" href="https://storage.clickn.co.kr//css/modules/module_video.css?v=20221110">
+    <link rel="stylesheet" type="text/css" href="https://storage.clickn.co.kr//css/modules/module_gallery.css?v=20221110">
+    <link rel="stylesheet" type="text/css" href="https://storage.clickn.co.kr//css/modules/module_table.css?v=20221110">
+    <link rel="stylesheet" type="text/css" href="https://storage.clickn.co.kr//css/modules/module_footer.css?v=20221110">
+    <link rel="stylesheet" type="text/css" href="https://storage.clickn.co.kr//css/modules/module_builderProductA.css?v=20221110"><!-- 상품 디스플레이 -->
+    <link rel="stylesheet" type="text/css" href="https://storage.clickn.co.kr//css/modules/module_builderProductB.css?v=20221110"><!-- 상품 문의 -->
+    <link rel="stylesheet" type="text/css" href="https://storage.clickn.co.kr//css/modules/module_builderProductC.css?v=20221110"><!-- 상품 후기 -->
+    
+    <link href="https://fonts.googleapis.com/css2?family=Black+And+White+Picture&amp;family=Black+Han+Sans&amp;family=Cute+Font&amp;family=Do+Hyeon&amp;family=Dokdo&amp;family=East+Sea+Dokdo&amp;family=Gaegu:wght@400;700&amp;family=Gamja+Flower&amp;family=Gugi&amp;family=Hi+Melody&amp;family=Jua&amp;family=Kirang+Haerang&amp;family=Nanum+Brush+Script&amp;family=Nanum+Gothic:wght@400;700&amp;family=Nanum+Myeongjo:wght@400;700&amp;family=Nanum+Pen+Script&amp;family=Poor+Story&amp;family=Single+Day&amp;family=Song+Myung&amp;family=Stylish&amp;family=Sunflower:wght@300;700&amp;family=Yeon+Sung&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&amp;family=Archivo:wght@400;700&amp;family=Exo:wght@200;400;700&amp;family=Fauna+One&amp;family=Fjalla+One&amp;family=Graduate&amp;family=Iceland&amp;family=Inconsolata:wght@300;500;700&amp;family=Italianno&amp;family=Josefin+Sans:wght@200;400;700&amp;family=Lato:wght@100;300;400;700&amp;family=Libre+Baskerville:wght@400;700&amp;family=Montserrat:wght@200;300;400;500;600;700&amp;family=Nixie+One&amp;family=Nunito:wght@200;400;700&amp;family=Oswald:wght@200;400;500;700&amp;family=Playfair+Display:wght@400;500;700&amp;family=Poppins:wght@200;400;700&amp;family=Raleway:wght@200;400;700&amp;family=Roboto:wght@100;300;400;500;700&amp;family=Simonetta:wght@400;900&amp;family=Space+Mono:wght@400;700&amp;family=Special+Elite&amp;family=Stardos+Stencil:wght@400;700&amp;family=Titan+One&amp;family=Titillium+Web:wght@200;400;700&amp;family=Trocchi&amp;family=Ultra&amp;family=Wellfleet&amp;family=Abril+Fatface&amp;family=Bodoni+Moda:wght@400;600;800&amp;family=DM+Serif+Display&amp;family=DM+Serif+Text&amp;family=EB+Garamond:wght@400;500&amp;family=Open+Sans:wght@300;400;700&amp;family=Petit+Formal+Script&amp;family=Quicksand:wght@300;700&amp;family=Cinzel&amp;family=Lobster&amp;family=MonteCarlo&amp;family=Shrikhand&amp;display=swap" rel="stylesheet">
+    
+        
+    
+    <script>
+    var LOGIN_TYPE = 'non-members';
+        LOGIN_TYPE = 'manager';
+    
+    var PAGE_CODE = 'page_lowlevel';
+    var PAGE_MODE = 'real';
+    
+        var HEADER_CONFIG = {"layout_type":"type1","header_module_name":"header_A031","header_module_parents":"header_A001","header_submenu_design":"design5","header_submenu_direction":"right","mypage_menu":"5","header_logo":"\/file\/640533069","login_menu":"yes","login_menu_name":"LOGIN","logout_menu_name":"LOGOUT","join_menu_name":"JOIN","login_before_greeting":null,"login_after_greeting":"님","gnb_menu":"3","navigation_fontsize":"18","util_menu":"no","header_brightness":"light","header_bgcolor":"#ffffff","navigation_color":"#000000","navigation_font":"Noto Sans KR","shopping_menuorder":null,"shopping_my":"yes","shopping_cart":"no","shopping_search":"no","page_code":"main","util_link":"[{\"name\":\"MYPAGE\",\"address\":\"\\\/mypages\",\"target\":\"_self\"},{\"name\":\"CS CENTER\",\"address\":\"#\",\"target\":\"_self\"},{\"name\":\"SITEMAP\",\"address\":\"#\",\"target\":\"_self\"}]"};
+        var FOOTER_CONFIG = {"footer_module_name":"footer_A017","footer_module_parents":"footer_A001","footer_textfield1":"no","footer_textfield1_source":null,"footer_textfield2":"no","footer_textfield2_source":null,"footer_menu":"no","fnb_menu":"4","footer_logo_src":"\/file\/115493806","footer_copyright":"yes","footer_copyright_source":"<p>COPYRIGHT (c) (주)회사명 ALL RIGHTS RESERVED.<\/p>","footer_escro":"no","footer_brightness":"light","footer_bgcolor2":"#f5f5f5","footer_fontcolor":null,"footer_fontcolor_default":"on","save_seq":"357","save_mode":"real","escro":"[{\"img_src\":\"\\\/file\\\/283980675\",\"link_address\":\"#bnr1\",\"link_target\":\"_blank\"}]"};
+        var BLOCK_LAYOUTS = {"module-1":{"seq":2064,"save_seq":351,"block_id":"module-1","parent_block":null,"child_num":null,"block_template":"image_A001","sort_num":0,"regist_date":"2022-11-12 14:47:58","childs":[],"module":{"module_name":"image_A001","content_type1":"image","content_type2":"image-type-A","module_possible":"all","module_preview_src":"https:\/\/storage.clickn.co.kr\/images\/module_list\/image\/image_A001.jpg","module_parents":"image_A001","module_category1":"image","module_category2":"","module_distribute":"yes","module_layout":"<div class='normal_module' data-content-type1='image' data-content-type2='image-type-A' data-module-name='image_A001' data-module-parents='image_A001' data-background-color='' data-background-image='' data-background-image-options='' data-background-attachment='' data-background-filter='' data-image-cutting='20'><div class='module_wrap fullsize_max' data-layout-fullsize='no'><div class='module_container' data-padding-top='20' data-padding-bottom='20'><\/div><\/div><\/div>","module_contents":"<a href='#none' data-link-type='' target='' data-cutting-apply='yes'><b><img src='https:\/\/storage.clickn.co.kr\/images\/module_contents\/image_a001.jpeg' alt='' \/><\/b><\/a>"}},"module-2":{"seq":2065,"save_seq":351,"block_id":"module-2","parent_block":null,"child_num":null,"block_template":"layout_N3_T1_01","sort_num":0,"regist_date":"2022-11-12 14:47:59","childs":{"module-3":{"seq":2066,"save_seq":351,"block_id":"module-3","parent_block":"module-2","child_num":1,"block_template":"text_A001_2","sort_num":0,"regist_date":"2022-11-12 14:47:59","module":{"module_name":"text_A001_2","content_type1":"text","content_type2":"text-type-A","module_possible":"all","module_preview_src":"https:\/\/storage.clickn.co.kr\/images\/module_list\/text\/text_A001_2.jpg","module_parents":"text_A001","module_category1":"text","module_category2":"","module_distribute":"yes","module_layout":"<div class='normal_module' data-content-type1='text' data-content-type2='text-type-A' data-module-name='text_A001_2' data-module-parents='text_A001' data-background-color='#e4e4e4' data-background-image='' data-background-image-options='' data-background-attachment='' data-background-filter=''><div class='module_wrap' data-layout-fullsize='no'><div class='module_container' data-padding-top='80' data-padding-bottom='80'><\/div><\/div><\/div>","module_contents":"<div data-text-editable='true' style='font-size: 30px; font-weight: 400; color: rgb(51, 51, 51); font-family: Roboto; text-align: center;'><p style=' line-height: 1.3;'>SIMILAR PRODUCTS<\/p><\/div><div data-text-editable='true' style='font-family: Roboto; font-size: 15px; color: rgb(165, 165, 165); text-align: center;'><p>&nbsp;<\/p><p>Est placerat in egestas erat imperdiet. Consequat interdum varius sit amet mattis vulputate enim.<\/p><\/div>"}},"module-4":{"seq":2067,"save_seq":351,"block_id":"module-4","parent_block":"module-2","child_num":2,"block_template":"text_A001_2","sort_num":0,"regist_date":"2022-11-12 14:47:59","module":{"module_name":"text_A001_2","content_type1":"text","content_type2":"text-type-A","module_possible":"all","module_preview_src":"https:\/\/storage.clickn.co.kr\/images\/module_list\/text\/text_A001_2.jpg","module_parents":"text_A001","module_category1":"text","module_category2":"","module_distribute":"yes","module_layout":"<div class='normal_module' data-content-type1='text' data-content-type2='text-type-A' data-module-name='text_A001_2' data-module-parents='text_A001' data-background-color='#e4e4e4' data-background-image='' data-background-image-options='' data-background-attachment='' data-background-filter=''><div class='module_wrap' data-layout-fullsize='no'><div class='module_container' data-padding-top='80' data-padding-bottom='80'><\/div><\/div><\/div>","module_contents":"<div data-text-editable='true' style='font-size: 30px; font-weight: 400; color: rgb(51, 51, 51); font-family: Roboto; text-align: center;'><p style=' line-height: 1.3;'>SIMILAR PRODUCTS<\/p><\/div><div data-text-editable='true' style='font-family: Roboto; font-size: 15px; color: rgb(165, 165, 165); text-align: center;'><p>&nbsp;<\/p><p>Est placerat in egestas erat imperdiet. Consequat interdum varius sit amet mattis vulputate enim.<\/p><\/div>"}},"module-5":{"seq":2068,"save_seq":351,"block_id":"module-5","parent_block":"module-2","child_num":3,"block_template":"text_A001_2","sort_num":0,"regist_date":"2022-11-12 14:47:59","module":{"module_name":"text_A001_2","content_type1":"text","content_type2":"text-type-A","module_possible":"all","module_preview_src":"https:\/\/storage.clickn.co.kr\/images\/module_list\/text\/text_A001_2.jpg","module_parents":"text_A001","module_category1":"text","module_category2":"","module_distribute":"yes","module_layout":"<div class='normal_module' data-content-type1='text' data-content-type2='text-type-A' data-module-name='text_A001_2' data-module-parents='text_A001' data-background-color='#e4e4e4' data-background-image='' data-background-image-options='' data-background-attachment='' data-background-filter=''><div class='module_wrap' data-layout-fullsize='no'><div class='module_container' data-padding-top='80' data-padding-bottom='80'><\/div><\/div><\/div>","module_contents":"<div data-text-editable='true' style='font-size: 30px; font-weight: 400; color: rgb(51, 51, 51); font-family: Roboto; text-align: center;'><p style=' line-height: 1.3;'>SIMILAR PRODUCTS<\/p><\/div><div data-text-editable='true' style='font-family: Roboto; font-size: 15px; color: rgb(165, 165, 165); text-align: center;'><p>&nbsp;<\/p><p>Est placerat in egestas erat imperdiet. Consequat interdum varius sit amet mattis vulputate enim.<\/p><\/div>"}}},"module":{"module_name":"layout_N3_T1_01","content_type1":"layout","content_type2":"layout-03","module_possible":"normal","module_preview_src":"https:\/\/storage.clickn.co.kr\/images\/module_list\/layout\/layout_N3_T1_01.png","module_parents":"layout_N3_01","module_category1":"layout","module_category2":"layout-03","module_distribute":"yes","module_layout":"<div class='layout_module' data-module-name='layout_N3_T1_01' data-module-parents='layout_N3_01' data-layout-type='T1' data-content-type1='layout' data-content-type2='layout-03' data-background-color='' data-background-image='' data-background-image-options='' data-background-attachment='' data-background-filter=''><div class='module_wrap' data-layout-fullsize='no'><div class='module_container' data-padding-top='40' data-padding-bottom='40'><\/div><\/div><\/div>","module_contents":"<ul><li><ul><li><div data-minimodule-id='' data-is-vacant='yes'><\/div><\/li><\/ul><\/li><li><ul><li><div data-minimodule-id='' data-is-vacant='yes'><\/div><\/li><\/ul><\/li><li><ul><li><div data-minimodule-id='' data-is-vacant='yes'><\/div><\/li><\/ul><\/li><\/ul>"}}};
+        var BLOCK_CONTENTS = [{"block_id":"module-1","parent_block":null,"html":"<a href=\"#none\" data-link-type=\"\" target=\"\" data-cutting-apply=\"yes\"><b><img src=\"https:\/\/storage.clickn.co.kr\/images\/module_contents\/image_a001.jpeg\" alt=\"\"><\/b><\/a>","options":"{\"layout-fullsize\":\"no\",\"padding-top\":\"20\",\"padding-bottom\":\"20\",\"background-color\":null,\"background-image\":null,\"background-image-options\":null,\"background-attachment\":null,\"background-filter\":null,\"image-cutting\":\"20\"}"},{"block_id":"module-2","parent_block":null,"html":"<ul><li><ul><li><div data-minimodule-id=\"module-3\" data-is-vacant=\"no\" class=\"\"><div class=\"normal_module\" data-content-type1=\"text\" data-content-type2=\"text-type-A\" data-module-name=\"text_A001_2\" data-module-parents=\"text_A001\" data-background-color=\"#e4e4e4\" data-background-image=\"\" data-background-image-options=\"\" data-background-attachment=\"\" data-background-filter=\"\" style=\"background-color: rgb(228, 228, 228); background-image: url(&quot;\/images\/bg_.png&quot;);\"><div class=\"module_wrap\" data-layout-fullsize=\"no\"><div class=\"module_container\" data-padding-top=\"80\" data-padding-bottom=\"80\"><div data-text-editable=\"true\" style=\"font-size: 30px; font-weight: 400; color: rgb(51, 51, 51); font-family: Roboto; text-align: center;\" class=\"\"><p style=\" line-height: 1.3;\">1번 선택지<\/p><\/div><div data-text-editable=\"true\" style=\"font-family: Roboto; font-size: 15px; color: rgb(165, 165, 165); text-align: center;\"><p>&nbsp;<\/p><p>Est placerat in egestas erat imperdiet. Consequat interdum varius sit amet mattis vulputate enim.<\/p><\/div><\/div><\/div><\/div><\/div><\/li><\/ul><\/li><li><ul><li><div data-minimodule-id=\"module-4\" data-is-vacant=\"no\" class=\"\"><div class=\"normal_module\" data-content-type1=\"text\" data-content-type2=\"text-type-A\" data-module-name=\"text_A001_2\" data-module-parents=\"text_A001\" data-background-color=\"#e4e4e4\" data-background-image=\"\" data-background-image-options=\"\" data-background-attachment=\"\" data-background-filter=\"\" style=\"background-color: rgb(228, 228, 228); background-image: url(&quot;\/images\/bg_.png&quot;);\"><div class=\"module_wrap\" data-layout-fullsize=\"no\"><div class=\"module_container\" data-padding-top=\"80\" data-padding-bottom=\"80\"><div data-text-editable=\"true\" style=\"font-size: 30px; font-weight: 400; color: rgb(51, 51, 51); font-family: Roboto; text-align: center;\" class=\"\"><p style=\" line-height: 1.3;\">2번 선택지<\/p><\/div><div data-text-editable=\"true\" style=\"font-family: Roboto; font-size: 15px; color: rgb(165, 165, 165); text-align: center;\"><p>&nbsp;<\/p><p>Est placerat in egestas erat imperdiet. Consequat interdum varius sit amet mattis vulputate enim.<\/p><\/div><\/div><\/div><\/div><\/div><\/li><\/ul><\/li><li><ul><li><div data-minimodule-id=\"module-5\" data-is-vacant=\"no\" class=\"\"><div class=\"normal_module\" data-content-type1=\"text\" data-content-type2=\"text-type-A\" data-module-name=\"text_A001_2\" data-module-parents=\"text_A001\" data-background-color=\"#e4e4e4\" data-background-image=\"\" data-background-image-options=\"\" data-background-attachment=\"\" data-background-filter=\"\" style=\"background-color: rgb(228, 228, 228); background-image: url(&quot;\/images\/bg_.png&quot;);\"><div class=\"module_wrap\" data-layout-fullsize=\"no\"><div class=\"module_container\" data-padding-top=\"80\" data-padding-bottom=\"80\"><div data-text-editable=\"true\" style=\"font-size: 30px; font-weight: 400; color: rgb(51, 51, 51); font-family: Roboto; text-align: center;\" class=\"\"><p style=\" line-height: 1.3;\">3번 선택지<\/p><\/div><div data-text-editable=\"true\" style=\"font-family: Roboto; font-size: 15px; color: rgb(165, 165, 165); text-align: center;\"><p>&nbsp;<\/p><p>Est placerat in egestas erat imperdiet. Consequat interdum varius sit amet mattis vulputate enim.<\/p><\/div><\/div><\/div><\/div><\/div><\/li><\/ul><\/li><\/ul>","options":"{\"layout-fullsize\":\"no\",\"padding-top\":\"40\",\"padding-bottom\":\"40\",\"background-color\":null,\"background-image\":null,\"background-image-options\":null,\"background-attachment\":null,\"background-filter\":null}"},{"block_id":"module-3","parent_block":"module-2","html":"<div data-text-editable=\"true\" style=\"font-size: 30px; font-weight: 400; color: rgb(51, 51, 51); font-family: Roboto; text-align: center;\" class=\"\"><p style=\" line-height: 1.3;\">1번 선택지<\/p><\/div><div data-text-editable=\"true\" style=\"font-family: Roboto; font-size: 15px; color: rgb(165, 165, 165); text-align: center;\"><p>&nbsp;<\/p><p>Est placerat in egestas erat imperdiet. Consequat interdum varius sit amet mattis vulputate enim.<\/p><\/div>","options":null},{"block_id":"module-4","parent_block":"module-2","html":"<div data-text-editable=\"true\" style=\"font-size: 30px; font-weight: 400; color: rgb(51, 51, 51); font-family: Roboto; text-align: center;\" class=\"\"><p style=\" line-height: 1.3;\">2번 선택지<\/p><\/div><div data-text-editable=\"true\" style=\"font-family: Roboto; font-size: 15px; color: rgb(165, 165, 165); text-align: center;\"><p>&nbsp;<\/p><p>Est placerat in egestas erat imperdiet. Consequat interdum varius sit amet mattis vulputate enim.<\/p><\/div>","options":null},{"block_id":"module-5","parent_block":"module-2","html":"<div data-text-editable=\"true\" style=\"font-size: 30px; font-weight: 400; color: rgb(51, 51, 51); font-family: Roboto; text-align: center;\" class=\"\"><p style=\" line-height: 1.3;\">3번 선택지<\/p><\/div><div data-text-editable=\"true\" style=\"font-family: Roboto; font-size: 15px; color: rgb(165, 165, 165); text-align: center;\"><p>&nbsp;<\/p><p>Est placerat in egestas erat imperdiet. Consequat interdum varius sit amet mattis vulputate enim.<\/p><\/div>","options":null}];
+        var BASIC_CONFIG = {"site_name":"한국어 수 표현 퀴즈","co_name":"충남대학교 언어학과","ceo_name":"박범준","co_phone":"010-4016-6874","co_email":"0925qjawns@naver.com","co_zipcode":"34134","co_address":"대전 유성구 대학로 99 (충남대학교)","co_address_detail":"W7 인문대학","co_regist_num":"000-00-00000","co_it_num":"0000-성남분당-0000","site_desc":null,"co_nation":"kr","co_fax":null,"timezone":"Asia\/Seoul","date_format":"Y.m.d","currency":"krw","sns_img":null,"fav_img":"\/file\/311019131","map_type":"direct","fav_img_tmp":"\/file\/311019131"};
+    
+        var MAP_CONFIG = {"map_type":"direct","map_service_type":"kakao","map_api":{"naver":{"client_id":null,"client_secret":null},"kakao":{"api_key":null},"google":{"api_key":null}},"map_feature":{"map_marker_icon":null,"map_zoom":null,"map_zoom_control":null},"map_script":{"KAKAO":"https:\/\/dapi.kakao.com\/v2\/maps\/sdk.js?libraries=services,clusterer,drawing&appkey=","NAVER":"https:\/\/openapi.map.naver.com\/openapi\/v3\/maps.js?submodules=geocoder&ncpClientId=","GOOGLE":"https:\/\/maps.googleapis.com\/maps\/api\/js?key="}};
+    
+    var PAGE_CONFIG = '';
+    
+        var _PATH = "\/pages\/lowlevel" ;
+    
+    var MODULES_STORAGE_BASE_URI = "https:\/\/storage.clickn.co.kr\/" ;
+    </script>
+    <script src="https://krnumquiz.clickn.co.kr/lang/skin_js.js"></script>
+    <script src="https://krnumquiz.clickn.co.kr/lang/common.js?m=front&amp;g=common"></script>
+    <script src="https://krnumquiz.clickn.co.kr/vendors/Jquery/jquery.min.js"></script>
+    <script src="https://krnumquiz.clickn.co.kr/vendors/Twbs-pagination/jquery.twbsPagination.js"></script>
+    <script src="https://krnumquiz.clickn.co.kr/js/common.js?v=20221110"></script>
+    <script src="https://krnumquiz.clickn.co.kr/js/skin_ui_functions.js?v=20221110"></script><!-- 우선 순위 높아야하는 UI Functions -->
+    
+    
+    <script>
+    var USER = ""
+    const SITE_CONFIG_OPTION = {"rightClick":"N","mouseDrag":"N","mobileZoom":"Y"}
+    </script>
+    
+    
+    
+    </head>
+    <body>	
+    <div id="skinLayoutWrap" class="skin_layout_wrap" data-layout-type="type1" data-header-hidden="no" data-footer-hidden="no" data-header-flying="no" data-header-floating="no" data-header-util="no" data-header-selectmenu="no" data-header-login="yes" data-header-bgcolor="#ffffff" data-header-brightness="light" data-header-utilcolor="" data-navigation-color="#000000" data-navigation-font="Noto Sans KR" data-navigation-fontsize="18" data-gnb-seq="3" data-wow-use="no" data-wow-ani="fadeInRight" data-shopping-my="yes" data-shopping-cart="no" data-shopping-search="no" data-shopping-menuorder="my-cart-search" data-mypage-menu="5">
+        <div id="pageConfigHeader" class="skin_layout_container skin_layout_container1">
+            <!-- ===================== Skin Header ===================== -->
+            <div id="skinHeaderSection" class="front_header_section" style="background-color: rgb(255, 255, 255);">
+    
+                <div class="header_module" data-module-name="header_A031" data-module-parents="header_A001" data-submenu-design="design5" data-submenu-direction="right" style="background-color: rgb(255, 255, 255);"><!-- 헤더 모듈 -->
+                    <div class="module_wrap">
+                        <div class="module_container">
+                            <div class="logo_area"><p><a href="/"><b><img id="headerLogo" src="/file/640533069" alt="" onerror="this.src='https://storage.clickn.co.kr//images/module_contents/logo_clickn.png';"></b></a></p></div>
+                            <div id="gnbUtilArea" class="gnb_area">
+                                <!-- 쇼핑몰 UTIL 영역 -->
+                                <div class="util_area">
+                                    <div class="module_wrap">
+                                        <div class="module_container">
+                                            <!-- 상단 셀렉트 메뉴( 다국어 사이트나 패밀리 사이트로 활용 가능 ) -->
+                                            <!--
+                                            <div class="select_link_area">
+                                                <div class="selectLinkMenu select_link_menu">
+                                                    <a class="defaule_text" href="#none"></a>
+                                                    <ul class="link_menu_list">
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            -->
+                                            <!-- 로그인 -->
+                                            <ul class="login_section">
+                                                <li class="greeting" style="font-family: &quot;Noto Sans KR&quot;; color: rgb(0, 0, 0);">
+                                                    <span class="before" style=""></span>
+                                                    <span class="after" style="display:none;"><span id="userID"></span><span id="greetingAfter">님</span></span>
+                                                </li>
+                                                <li class="logout" style="display:none;"><a href="javascript:logout()" style="font-family: &quot;Noto Sans KR&quot;; color: rgb(0, 0, 0);">LOGOUT</a></li>
+                                                <li class="login" style=""><a href="/members/login" style="font-family: &quot;Noto Sans KR&quot;; color: rgb(0, 0, 0);">LOGIN</a></li>
+                                                <li class="join" style=""><a href="/members/join" style="font-family: &quot;Noto Sans KR&quot;; color: rgb(0, 0, 0);">JOIN</a></li>
+                                            </ul>
+                                            <!-- 쇼핑몰 유틸메뉴( 다른 링크로도 활용 가능 ) -->
+                                            <ul class="util_menu_list" style="font-family:Noto Sans KR"><li><a href="/mypages" target="_self" style="color: rgb(0, 0, 0); font-family: &quot;Noto Sans KR&quot;;">MYPAGE</a></li><li><a href="#" target="_self" style="color: rgb(0, 0, 0); font-family: &quot;Noto Sans KR&quot;;">CS CENTER</a></li><li><a href="#" target="_self" style="color: rgb(0, 0, 0); font-family: &quot;Noto Sans KR&quot;;">SITEMAP</a></li></ul>
+    
+                                            <!-- [커머스] 장바구니, 검색 -->
+                                            <ul class="shopping_menu" style="font-family:Noto Sans KR">
+                                                <li class="shopping_my" data-menu-order="my" style="color: rgb(0, 0, 0);">
+                                                    <a class="my_icon" href="/mypages" title="마이페이지"></a>
+                                                </li>
+                                                <li class="shopping_cart" data-menu-order="cart" style="color: rgb(0, 0, 0);">
+                                                    <a class="cart_icon" href="/cart" title="장바구니"><span id="cartNum" class="cart_num">0</span></a>
+                                                </li>
+                                                <li class="shopping_search" data-menu-order="search" style="color: rgb(0, 0, 0);">
+                                                    <a href="javascript:void(0)" class="btn_search_open" title="상품 검색">검색창 열기</a>
+                                                    <div class="search_layer" style="background-color: rgb(255, 255, 255);">
+                                                        <label class="search_box"><input type="text" name="search_input_text" class="search_input_text" autocomplete="off" placeholder="상품 검색" style="color: rgb(0, 0, 0);"></label>
+                                                        <button type="button" class="btn_search_header">검색</button>
+                                                        <button type="button" class="btn_search_close">닫기</button>
+                                                    </div>
+                                                </li>
+                                            </ul>
+    
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <!-- GNB -->
+                                <ul id="GnbMenu" class="gnb" style="font-family:Noto Sans KR"><li><a href="/pages/about" target="_blank" style="color: rgb(0, 0, 0); font-size: 18px;">소개</a></li></ul>
+                            </div>
+    
+                            <!-- Aside open button( 햄거버 ) -->
+                            <div class="hambuger_area">
+                                <a id="asideOpenrBtn" href="#none"><strong>Aside open</strong></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+            <script>//headerFlyingStand(); // 요 스크립트 위치 변경 금지!</script>
+            <!-- ===================== // Skin Header ===================== -->
+        </div>
+        <div class="skin_layout_container skin_layout_container2">
+            <div class="front_main_area">
+                <div id="skinMainWrap" class="skin_main_wrap">
+                    <div class="skin_main_container skin_main_container1">
+                        <!-- ===================== Skin Main ===================== -->
+                        <div id="skinMainSection" class="skin_main_section">
+                                                    <div class="skin_block" data-module-id="module-1" data-module-type="normal" data-is-empty="no">
+                                                        <div class="normal_module" data-content-type1="image" data-content-type2="image-type-A" data-module-name="image_A001" data-module-parents="image_A001" data-background-color="" data-background-image="" data-background-image-options="" data-background-attachment="" data-background-filter="" data-image-cutting="20" style="background-color: transparent; background-image: url(&quot;/images/bg_.png&quot;);">
+                                                            <div class="module_wrap fullsize_max" data-layout-fullsize="no">
+                                                                <div class="module_container" data-padding-top="20" data-padding-bottom="20">
+                                                                    <a href="#none" data-link-type="" target="" data-cutting-apply="yes">
+                                                                        <b>
+                                                                            <img src="https://storage.clickn.co.kr/images/module_contents/image_a001.jpeg" alt="">
+                                                                        </b>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <div class="skin_block" data-module-id="module-2" data-module-type="layout" data-is-empty="no">
+                                                        <div class="layout_module" data-module-name="layout_N3_T1_01" data-module-parents="layout_N3_01" data-layout-type="T1" data-content-type1="layout" data-content-type2="layout-03" data-background-color="" data-background-image="" data-background-image-options="" data-background-attachment="" data-background-filter="" style="background-color: transparent; background-image: url(&quot;/images/bg_.png&quot;);">
+                                                            <div class="module_wrap" data-layout-fullsize="no">
+                                                                <div class="module_container" data-padding-top="40" data-padding-bottom="40">
+                                                                    <ul>
+                                                                        <li>
+                                                                            <ul>
+                                                                                <li>
+                                                                                    <div data-minimodule-id="module-3" data-is-vacant="no" class=""><div class="normal_module" data-content-type1="text" data-content-type2="text-type-A" data-module-name="text_A001_2" data-module-parents="text_A001" data-background-color="#e4e4e4" data-background-image="" data-background-image-options="" data-background-attachment="" data-background-filter="" style="background-color: rgb(228, 228, 228); background-image: url(&quot;/images/bg_.png&quot;);">
+                                                                                        <div class="module_wrap" data-layout-fullsize="no">
+                                                                                            <div class="module_container" data-padding-top="80" data-padding-bottom="80">
+                                                                                                <div data-text-editable="true" style="font-size: 30px; font-weight: 400; color: rgb(51, 51, 51); font-family: Roboto; text-align: center;" class="">
+                                                                                                    <p style=" line-height: 1.3;"></p>
+                                                                                                </div>
+                                                                                                <div data-text-editable="true" style="font-family: Roboto; font-size: 15px; color: rgb(165, 165, 165); text-align: center;">
+                                                                                                    <p>&nbsp;</p>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </li>
+                                                                    <li>
+                                                                        <ul>
+                                                                            <li>
+                                                                                <div data-minimodule-id="module-4" data-is-vacant="no" class="">
+                                                                                    <div class="normal_module" data-content-type1="text" data-content-type2="text-type-A" data-module-name="text_A001_2" data-module-parents="text_A001" data-background-color="#e4e4e4" data-background-image="" data-background-image-options="" data-background-attachment="" data-background-filter="" style="background-color: rgb(228, 228, 228); background-image: url(&quot;/images/bg_.png&quot;);">
+                                                                                        <div class="module_wrap" data-layout-fullsize="no">
+                                                                                            <div class="module_container" data-padding-top="80" data-padding-bottom="80">
+                                                                                                <div data-text-editable="true" style="font-size: 30px; font-weight: 400; color: rgb(51, 51, 51); font-family: Roboto; text-align: center;" class="">
+                                                                                                    <p style=" line-height: 1.3;">2번 선택지</p>
+                                                                                                </div>
+                                                                                                <div data-text-editable="true" style="font-family: Roboto; font-size: 15px; color: rgb(165, 165, 165); text-align: center;">
+                                                                                                    <p>&nbsp;</p>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </li>
+                                                                    <li>
+                                                                        <ul>
+                                                                            <li>
+                                                                                <div data-minimodule-id="module-5" data-is-vacant="no" class=""><div class="normal_module" data-content-type1="text" data-content-type2="text-type-A" data-module-name="text_A001_2" data-module-parents="text_A001" data-background-color="#e4e4e4" data-background-image="" data-background-image-options="" data-background-attachment="" data-background-filter="" style="background-color: rgb(228, 228, 228); background-image: url(&quot;/images/bg_.png&quot;);">
+                                                                                    <div class="module_wrap" data-layout-fullsize="no">
+                                                                                        <div class="module_container" data-padding-top="80" data-padding-bottom="80">
+                                                                                            <div data-text-editable="true" style="font-size: 30px; font-weight: 400; color: rgb(51, 51, 51); font-family: Roboto; text-align: center;" class="">
+                                                                                                <p style=" line-height: 1.3;">3번 선택지</p>
+                                                                                            </div>
+                                                                                            <div data-text-editable="true" style="font-family: Roboto; font-size: 15px; color: rgb(165, 165, 165); text-align: center;">
+                                                                                                <p>&nbsp;</p>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                        <!-- ===================== // Skin Main ===================== -->
+                    </div>
+                    <div id="pageConfigFooter" class="skin_main_container skin_main_container2">
+                        <!-- ===================== Skin Footer ===================== -->
+                        <div id="skinFooterSection" class="skin_footer_section" data-footer-logo="no" data-footer-menu="no" data-footer-sns="no" data-footer-info="no" data-footer-hosting="no" data-footer-coregistlink="no" data-footer-escro="no" data-footer-copyright="yes" data-footer-textfield1="no" data-footer-textfield2="no" data-fnb-seq="4" data-footer-bgcolor2="#f5f5f5" data-footer-brightness="light" data-footer-fontcolor="" data-footer-fontfamily="">
+                            <div class="footer_module" data-module-name="footer_A017" data-module-parents="footer_A001" style="background-color: rgb(245, 245, 245);">
+                                <div class="module_wrap">
+                                    <div class="module_container">
+                                        <div class="footer_section logo_area">
+                                            <a href="/"><b><img id="footerLogo" src="/file/115493806" alt="" onerror="this.src='https://storage.clickn.co.kr//images/module_contents/logo_blank.png';"></b></a>
+                                        </div>
+                                        <div class="footer_section fnb_area">
+                                            <!-- FNB 햄버거
+                                            <div class="fnb_open_area" id="fnbOpenrBtn">
+                                                <span class="fnb_open_btn"><strong>Footer Menu Open</strong></span>
+                                            </div> -->
+    
+                                            <div class="fnb_container">
+                                                <ul id="FnbMenu" class="fnb"><li><a href="/main">HOME</a></li><li><a href="/pages/about">ABOUT</a></li><li><a href="/members/terms">이용약관</a></li><li><a href="/members/policy">개인정보처리방침</a></li></ul>
+                                            </div>
+                                        </div>
+                                        <ul id="footerCompanyInfo" class="footer_section mall_info"><li><span class="title">회사명 : </span><span class="desc">충남대학교 언어학과</span></li><li><span class="title">대표자 : </span><span class="desc">박범준</span></li><li><span class="title">주소 : </span><span class="desc">대전 유성구 대학로 99 (충남대학교) W7 인문대학</span></li><li><span class="title">이메일 : </span><span class="desc">0925qjawns@naver.com</span></li><li><span class="title">전화 : </span><span class="desc">010-4016-6874</span></li><li><span class="title">사업자등록번호 : </span><span class="desc">000-00-00000</span></li><li><span class="title">통신판매업신고 : </span><span class="desc">0000-성남분당-0000</span></li><li class="co_regist_link"><a class="desc" href="https://www.ftc.go.kr/bizCommPop.do?wrkr_no=0000000000" target="_blank">[사업자정보확인]</a></li><li class="hosting_info"><span class="title">호스팅서비스 : </span><span class="desc">가비아씨엔에스</span></li></ul>
+                                        <div class="footer_section text_field text_field1"><div data-text-editable="true"><p><span style="font-size:15px; font-weight:500;">고객센터</span></p><p><br></p><p>경기도 성남시 분당구 대왕판교로 670</p><p>유스페이스 B동 322, 323호 / A동 403호</p><p>clickn@gabiacns.com</p></div></div>
+                                        <div class="footer_section text_field text_field2"><div data-text-editable="true"><p><span style="font-size:15px; font-weight:500;">ACCOUNT INFO</span></p><p><br></p><p>국민은행</p><p>00000-00-000000</p><p>(주)CLICKN</p></div></div>
+                                        <div class="footer_section sns_list">
+                                            <ul class="snsLinks"><li><a href="https://www.facebook.com/" target="_blank" title="새창"><img src="/file/1721168115" alt=""></a></li><li><a href="https://www.instagram.com/" target="_blank" title="새창"><img src="/file/1196127828" alt=""></a></li><li><a href="https://blog.naver.com/" target="_blank" title="새창"><img src="/file/671088569" alt=""></a></li><li><a href="https://www.kakaocorp.com/page/service/service/KakaoTalk" target="_blank" title="새창"><img src="/file/128738586" alt=""></a></li><li><a href="https://www.youtube.com/" target="_blank" title="새창"><img src="/file/1616964223" alt=""></a></li></ul>
+                                        </div>
+                                        <div class="footer_section escro_area">
+                                            <ul><li><a href="#bnr1" target="_blank"><img src="/file/283980675" alt=""></a></li></ul>
+                                        </div>
+                                        <div class="footer_section copyright" data-text-editable="true"><p>COPYRIGHT (c) (주)회사명 ALL RIGHTS RESERVED.</p></div>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <!-- +++++++++ free 배너 +++++++++ -->
+                            <div class="level1_bnr_wrap">
+                                <a href="https://www.clickn.co.kr" target="_blank" class="level1_bnr">
+                                    <img src="/images/logo_small.png" alt="CLICKN" class="logo">
+                                    <span class="txt">사이트 제작엔 누구나 클릭엔</span>
+                                </a>
+                            </div>
+                            <!-- +++++++++ //free 배너 +++++++++ -->
+                                                </div>
+                        <!-- ===================== // Skin Main ===================== -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 상/하단 바로가기 버튼 -->
+    <div id="btnBott" class="btn_bott_group">
+        <a href="#skinLayoutWrap" class="btn_top"><span class="screenout">TOP</span></a>
+        <a href="#skinFooterSection" class="btn_bott"><span class="screenout">BOTTOM</span></a>
+    </div>
+    
+    <!-- 어사이드 닫기 버튼 -->
+    <a href="#none" id="asideCloseBtn" class="aside_close">Aside close</a>
+    
+    <!-- 비밀글 보기 Layer -->
+    <div id="secretContentsPopup" class="resp_layer_pop small" style="display:none;">
+        <h4 class="title"><b>비밀번호 확인</b></h4>
+        <form onsubmit="return false"><!-- form 위치 -->
+            <div class="y_scroll_auto">
+                <div class="layer_pop_contents" style="text-align:center;">
+                    <p>
+                        비밀번호를 입력해야 게시글을 확인할 수 있습니다.<br>
+                        게시글 등록 시 입력했던 비밀번호를 입력해주세요.<br>
+                    </p>
+                    <p class="Mt30">
+                        <input type="password" name="secret_pw_input" placeholder="비밀번호 입력" class="input_style1" style="width:200px;">
+                    </p>
+                </div>
+            </div>
+            <div class="layer_bottom_btn_area">
+                <ul class="basic_btn_area">
+                    <li><button type="button" class="btn_resp layer_btm_style style1" onclick="hideCenterLayer();">취소</button></li>
+                    <li><button type="button" id="btnSecretPwConfirm" class="btn_resp layer_btm_style style2">확인</button></li>
+                </ul>
+            </div>
+        </form>
+        <a href="javascript:void(0)" class="btn_pop_close" onclick="hideCenterLayer();"></a>
+    </div>
+    
+    <!-- 모달 -->
+    <div id="skinModal" class="modal_bg"></div>
+    
+    <!-- 캡차 -- skin_render_forms.js -- 489라인 .load('url') 방식으로 변경 - 210514 -->
+    
+    
+    <!-- 팝업모듈 -->
+    <div id="popup_module_modal" class="modal_bg"></div>
+    <div id="popupArea">
+        <div id="popupArea_staff"></div>
+        <div id="popupArea_any"></div>
+    </div>
+    
+    <!-- 갤러리 보기 Layer -->
+    <div id="galleryViewPopup" class="gallery_view_popup" data-gallery-id="" data-gallery-seq="" style="display:none;">
+        <h4 class="title">
+            <b><span class="gallery_name">테스트</span></b>
+        </h4>
+        <div class="gallery_view_wrap">
+            <div class="gallery_view_container">
+                <div class="gallery_image_area">
+                </div>
+            </div>
+            <a href="#none" class="arrow_btn" data-direction="prev" title="Prev"></a>
+            <a href="#none" class="arrow_btn" data-direction="next" title="Next"></a>
+        </div>
+        <div class="seq_area"><p class="num" style="font-size:22px;"><span class="current" style="font-size:24px;"></span> / <span class="last"></span></p></div>
+        <a href="#none" class="btn_pop_close"></a>
+    </div>
+    
+    <div class="resp_layer_pop small agree-pop-layer" id="daumPostWrapElement" data-key="daum_post" style="display:none;">
+        <h4 class="title"><b>주소검색</b></h4>
+        <form onsubmit="return false"><!-- form 위치 -->
+            <div class="y_scroll_auto">
+                <div class="layer_pop_contents" id="daum_post_element">
+                    <p>
+                        </p><pre class="match_typing detailContents"></pre>
+                    <p></p>
+                </div>
+            </div>
+            <div class="layer_bottom_btn_area">
+                <ul class="basic_btn_area">
+                    <li><button type="button" class="btn_resp layer_btm_style style2" onclick="hideCenterLayer();">닫기</button></li>
+                </ul>
+            </div>
+        </form>
+        <a href="javascript:void(0)" class="btn_pop_close" onclick="hideCenterLayer();"></a>
+    </div>
+    
+    <!-- ===================== 하단 스크립트 ===================== -->
+    <script src="https://krnumquiz.clickn.co.kr/vendors/Slick/slick.min.js"></script>
+    <script src="https://krnumquiz.clickn.co.kr/vendors/Swiper/swiper.min.js"></script><!-- Swiper js-->
+    <script src="https://krnumquiz.clickn.co.kr/vendors/Froala/js/froala_editor.pkgd.min.js"></script>
+    <script src="https://krnumquiz.clickn.co.kr/vendors/Froala/js/languages/ko.js"></script>
+    <script src="https://krnumquiz.clickn.co.kr/vendors/Fontawesome/font_awesome.min.js"></script>
+    <script src="https://krnumquiz.clickn.co.kr/vendors/Wow/wow.min.js"></script><!-- Wow.js -->
+    <script src="https://krnumquiz.clickn.co.kr/vendors/Datepicker/js/datepicker.min.js"></script><!-- datapicker -->
+    <script src="https://krnumquiz.clickn.co.kr/vendors/Datepicker/lang/datepicker.lang.js"></script><!-- datapicker language -->
+    <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script><!-- 카카오 우편번호 API -->
+    
+    <!-- 지도 API -->
+    
+    <script src="https://krnumquiz.clickn.co.kr/js/skin_render_map.js?v=20221110"></script>
+    <script src="https://krnumquiz.clickn.co.kr/js/skin_render_video.js?v=20221110"></script>
+    
+    <!-- 주소 변환 -->
+    <script src="https://krnumquiz.clickn.co.kr/js/postcode.js?v=20221110"></script>
+    <script src="https://krnumquiz.clickn.co.kr/vendors/Dropzone/js/dropzone.min.js"></script>
+    <script src="https://krnumquiz.clickn.co.kr/vendors/Masonry/js/masonry.pkgd.min.js"></script>
+    <script src="https://krnumquiz.clickn.co.kr/js/design_loader.js?v=20221110"></script>
+    <script src="https://krnumquiz.clickn.co.kr/js/skin_render_hf.js?v=20221110"></script>
+    <script src="https://krnumquiz.clickn.co.kr/js/skin_render_module.js?v=20221110"></script>
+    <script src="https://krnumquiz.clickn.co.kr/js/skin_render_menus.js?v=20221110"></script>
+    <script src="https://krnumquiz.clickn.co.kr/js/skin_render_slide.js?v=20221110"></script>
+    <script src="https://krnumquiz.clickn.co.kr/js/skin_render_board.js?v=20221110"></script>
+    <script src="https://krnumquiz.clickn.co.kr/js/skin_render_forms.js?v=20221110"></script>
+    <script src="https://krnumquiz.clickn.co.kr/js/skin_render_popup.js?v=20221110"></script>
+    <script src="https://krnumquiz.clickn.co.kr/js/skin_render_settings.js?v=20221110"></script>
+    <script src="https://krnumquiz.clickn.co.kr/js/skin_render_gallery.js?v=20221110"></script>
+    <script src="https://krnumquiz.clickn.co.kr/js/skin_basic_info.js?v=20221110"></script><!-- 사이트 정보 연동, sns 링크 연동 -->
+    <script src="https://krnumquiz.clickn.co.kr/js/skin_render_builderProductA.js?v=20221110"></script><!-- 상품 디스플레이 -->
+    <script src="https://krnumquiz.clickn.co.kr/js/skin_render_builderProductB.js?v=20221110"></script><!-- 상품 문의 -->
+    <script src="https://krnumquiz.clickn.co.kr/js/skin_render_builderProductC.js?v=20221110"></script><!-- 상품 후기 -->
+    <script src="https://krnumquiz.clickn.co.kr/js/skin_ui.js?v=20221110"></script>
+    <script src="https://storage.clickn.co.kr//js/modules/modules_ui.js?v=20221110"></script>
+    
+    
+    <script src="/modules/js?m=members&amp;js=login&amp;v=20221110"></script>
+        <script>
+        PAGE_CONFIG = {"page_seq":7,"page_code":"lowlevel","page_name":"난이도 하","page_auth":0,"hide_header":0,"hide_footer":0,"regist_date":"2022-11-12 14:45:56"};
+        </script>
+        
+    
+    
+    
+    <footer>
+    
+    </footer>
+    
+    
+    </body></html>
