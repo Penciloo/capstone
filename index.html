@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>수 표현 퀴즈</title>
+
+        <style>
+           @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Do+Hyeon&family=Hahmlet:wght@100&family=Song+Myung&display=swap');
+
+            header {
+                font-family: 'Do Hyeon', sans-serif;
+                font-size: 30px;
+                padding: 20px;
+                color: white;
+                background: #000069;
+                font-weight: bold;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            h1{
+                display: inline-block;
+                vertical-align: middle;
+                color: white;
+                margin: 0.5rem;
+                padding: 0;
+            }
+
+            
+            ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                display: flex;
+            }
+
+            
+            li.icon {
+                flex-basis: 25%;
+            }
+            
+            
+            a {
+                display: block;
+                text-align: center;
+                margin: .25rem;
+                padding: .5rem 1rem;
+                text-decoration: none;
+                font-weight: bold;
+                font-size: 40px;
+                color: white;
+                background: #000069;
+            }
+
+            a:hover {
+                background: white;
+                color: black;
+                transition: 0.3s;
+            }
+
+
+            .contents {
+                position: relative;
+                padding-top: 10px;
+                place-items: center;
+                text-align: center;
+            }
+
+            .item1{
+                display: inline-block;
+                font-family: 'Do Hyeon', sans-serif;
+                font-size: 50px;
+                display: inline;
+                background-color: white;
+                border: solid 10px skyblue;
+                border-radius: 25px;
+                width: 20%;
+                height: 300px;
+                text-align: center;
+            }
+            
+            .item1:hover{
+                color: white;
+                background-color: #000069;
+                transition: 0.3s;
+            }
+
+            .item2{
+                display: inline-block;
+                font-family: 'Do Hyeon', sans-serif;
+                font-size: 50px;
+                display: inline;
+                background-color: white;
+                place-items: center;
+                border: solid 10px skyblue;
+                border-radius: 25px;
+                width: 20%;
+                height: 300px;
+                text-align: center;
+            }
+            
+            
+            .item2:hover{
+                color: white;
+                background-color: #000069;
+                transition: 0.3s;
+            }
+
+            .item3{
+                display: inline-block;                
+                font-family: 'Do Hyeon', sans-serif;
+                font-size: 50px;
+                display: inline;
+                background-color: white;
+                place-items: center;
+                border: solid 10px skyblue;
+                border-radius: 25px;
+                width: 20%;
+                height: 300px;
+                text-align: center;
+            }
+            
+            .item3:hover{
+                color: white;
+                background-color: #000069;
+                transition: 0.3s;
+            }
+
+            .grid_title{
+                padding-top: 300px;
+                position: relative;
+                font-family: 'Do Hyeon', sans-serif;
+                background-image: url('main_logo.png');
+                background-position: center;
+                background-repeat: no-repeat;
+                place-items: center;
+	            display: grid;
+                width: 100%;
+	            height: 500px;
+            }
+
+            .text_Area{
+                font-family: 'Do Hyeon', sans-serif;
+                font-size: 30px;
+                font-weight: 900;
+            }
+
+            .grid_subtitle{
+                font-family: 'Do Hyeon', sans-serif;
+                font-size: 30px;
+                text-align: center;
+            }
+
+            .headerButton{
+                align-content: right;
+            }
+
+            
+        </style>
+    </head>
+    
+    <header>
+        <h1 href="index.html">한국어 수 표현 퀴즈 - CNU Linguistics</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">메인</a></li>
+                <li><a href="introduce.html">소개</a></li>
+                <li><a href="contact.html">문의</a></li>
+            </ul>
+        </nav>
+    </header>
+        <body>
+            <div class="container">
+            <div class="grid_title">
+            </div>
+            
+        <div class="contents">
+            <button class="item1" onclick="location.replace('level.html')">문제 풀기</button>&nbsp;&nbsp;&nbsp;
+            <button class="item2" onclick="location.replace('studyLevel.html')">문법 공부</button>&nbsp;&nbsp;&nbsp;
+            <button class="item3" onclick="location.replace('notice.html')">공지사항</button>&nbsp;&nbsp;&nbsp;
+    </div>
+        </div>
+        </body>
+        
+</html>
