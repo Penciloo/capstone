@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Hahmlet:wght@100&display=swap');
+     
+      header {
+                font-family: 'Do Hyeon', sans-serif;
+                font-size: 30px;
+                padding: 20px;
+                color: white;
+                background: #000069;
+                font-weight: bold;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            header h1{
+                display: inline-block;
+                vertical-align: middle;
+                color: white;
+                margin: 0.5rem;
+                padding: 0;
+            }
+
+            
+            ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                display: flex;
+            }
+
+            
+            li.icon {
+                flex-basis: 25%;
+            }
+            
+            
+            header a {
+                display: block;
+                text-align: center;
+                margin: .25rem;
+                padding: .5rem 1rem;
+                text-decoration: none;
+                font-weight: bold;
+                font-size: 40px;
+                color: white;
+                background: #000069;
+            }
+
+            header a:hover {
+                background: white;
+                color: black;
+                transition: 0.3s;
+            }
+
+body {
+   font-size: 18px;
+}
+
+.grid {  
+  padding: 30px 300px 200px;
+  margin: 0 auto;
+  width: 500px;
+  background: #fff;
+  border: 1px solid #000069;
+  grid-template-columns: 150px 150px 150px;
+}
+
+
+.grid h4 {
+  font-family: 'Do Hyeon', sans-serif;
+  color: #000069;
+  font-size: 80px;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 0%;
+}
+
+.grid a {
+   font-family: 'Do Hyeon', sans-serif;
+  color: #333;
+  font-size: 30px;
+  text-align: center;
+  align-content: center;
+}
+
+#question {
+   font-family: 'Do Hyeon', sans-serif;
+  padding: 2em;
+  background: #000069;
+  border-radius: 15px;
+  font-size: 24px;
+  color: white;
+}
+
+#quiz {
+  text-align: center;
+}
+
+#progress {
+   font-family: 'Do Hyeon', sans-serif;
+  font-size: 20px;
+  color: #2b2b2b;
+  
+}
+
+.buttons {
+  padding: 0px 30px 20px 0px;
+  border: 2px solid none;
+  border-radius: 20px;
+}
+
+.btn {
+   font-family: 'Do Hyeon', sans-serif;
+  margin: 0px 0px 15px 0px;
+  padding: 10px;
+  width: 500px;
+  font-size: 18px;
+  color: #333;
+  background: white;
+  border: 2px solid black;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all .2s;
+}
+
+.btn:nth-child(2n) {
+  margin-right: 0;
+}
+
+.btn:hover {
+  background: #464646;
+  color: white;
+}
+#level{
+   font-family: 'Hahmlet', serif;
+   font-size: 30px;
+   text-align: center;
+}
+
+#background_1{
+   background-color: grey;
+}
+
+.resultBtn{
+   font-family: 'Do Hyeon', sans-serif;
+  margin: 0px 0px 15px 0px;
+  padding: 10px;
+  width: 110px;
+  font-size: 20px;
+  color: #333;
+  background: white;
+  border: 2px solid black;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all .2s;
+}
+
+.resultBtn:hover{
+   background-color: #000069;
+   color: white;
+}
+
+.answer_lst_wrap{
+   font-size: 30px;
+   text-align: center;
+   font-family: 'Do Hyeon', sans-serif;
+   background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 20px;
+}
+.answer_lst_wrap:after{
+   font-size: 30px;
+   content: '\002B';
+   color: white;
+   font-weight: bold;
+   float: right;
+   margin-left: 5px;
+   font-size: 30px;
+}
+
+.active:after {
+            content: "\2212";
+        }
+
+.ans{
+   padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+    </style>
+    <script>
+      function collapse(element) {
+          var before = document.getElementsByClassName("active")[0]               // 기존에 활성화된 버튼
+          if (before && document.getElementsByClassName("active")[0] != element) {  // 자신 이외에 이미 활성화된 버튼이 있으면
+              before.nextElementSibling.style.maxHeight = null;   // 기존에 펼쳐진 내용 접고
+              before.classList.remove("active");                  // 버튼 비활성화
+          }
+          element.classList.toggle("active");         // 활성화 여부 toggle
+
+          var content = element.nextElementSibling;
+          if (content.style.maxHeight != 0) {         // 버튼 다음 요소가 펼쳐져 있으면
+              content.style.maxHeight = null;         // 접기
+          } else {
+              content.style.maxHeight = content.scrollHeight + "px";  // 접혀있는 경우 펼치기
+          }
+      }
+  </script>
+  
+</head>
+<header>
+    <h1 href="index.html">한국어 수 표현 퀴즈 - CNU Linguistics</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">메인</a></li>
+            <li><a href="introduce.html">소개</a></li>
+            <li><a href="contact.html">문의</a></li>
+        </ul>
+    </nav>
+</header>
+<body>
+    <div class="grid">
+        <div id="quiz">
+         <h1 id="level">난이도 하</h1>
+         <a id="image"></a>
+           <p id="question"></p>
+           <div class="buttons">
+              <button class="btn"></button>
+              <button class="btn"></button>
+              <button class="btn"></button>
+           </div>
+           <footer>
+              <p id="progress">진행 정보</p>
+           </footer>
+        </div>
+     </div>
+     
+<!--퀴즈 관련 스크립트-->
+    <script>
+// 문제 객체(생성자 함수)
+function Question(image, text, choice, answer) {
+   this.image = image; // 질문 사진
+   this.text = text; // 질문 텍스트
+   this.choice = choice; // 선택할 답들(배열)
+   this.answer = answer; // 정답 정보
+}
+
+// 퀴즈 정보 객체
+function Quiz(questions) {
+   this.score = 0; // 점수
+   this.questions = questions; // 문제
+   this.questionIndex = 0; // 문제 번호
+   this.fail = [];
+   this.failQuest = [];
+   this.failAnswer = [];
+}
+
+
+// 정답 확인 메서드
+Quiz.prototype.correctAnswer = function(answer) {
+   return answer == one.answer;
+   }
+
+<!--
+var images =[
+/// 고유어계 고빈도 분류사 ///
+".\images\가지.jpg",
+".\images\군데.jpg",
+".\images\그릇.jpg",
+".\images\그루.jpg",
+".\images\개비.jpg",
+".\images\마리.jpg",
+".\images\송이.jpg",
+".\images\자루.jpg",
+".\images\켤레.png",
+".\images\통.jpg",
+".\images\방울.png",
+".\images\보루.jpg",
+".\images\바구니.jpg",
+".\images\발.png",
+".\images\뼘.png",
+".\images\사람.jpg",
+".\images\뿌리.jpg",
+".\images\손.jfif",
+".\images\알.jfif",
+".\images\줄.jpg",
+".\images\짝.png",
+".\images\다발.png",
+".\images\달.png",
+".\images\벌.jpg",
+".\images\null.png",
+".\images\null.png",
+".\images\null.png",
+".\images\null.png",
+".\images\식구.jpg",
+".\images\곳.png",
+".\images\발.png",
+".\images\포기.jpg",
+".\images\null.png",
+".\images\null.png",
+
+/// 한자어계 고빈도 분류사 ///
+".\images\인분.png",
+".\images\쌍.jpg",
+".\images\초.jpg",
+".\images\층.jpg",
+".\images\세.jpg",
+".\images\원.jpg",
+".\images\개월.jpg",
+".\images\위.jpg",
+".\images\칸.png",
+".\images\배.jpg",
+".\images\학년,반.png",
+".\images\시,분.jpg",
+".\images\시, 분(2).png",
+".\images\세기.jpg",
+".\images\시간.png",
+".\images\월, 일.jpg",
+".\images\월, 일.png",
+".\images\인.jfif",
+".\images\잔.jpg",
+".\images\null.png",
+".\images\종류.jfif",
+".\images\주년.jpg",
+".\images\종.jpg",
+".\images\null.png",
+".\images\표.jpg",
+".\images\호.png",
+".\images\회.jpg",
+".\images\개.jfif",
+".\images\개2.jpg",
+".\images\건.jpg",
+".\images\권.jpg",
+".\images\근.png",
+".\images\급.png",
+".\images\과목.jpg",
+".\images\교시.jpg",
+".\images\null.png",
+".\images\대.jpg",
+".\images\동.jfif",
+".\images\명.png",
+".\images\번.png",
+".\images\병.jpg",
+
+///외래어계 고빈도 분류사///
+".\images\게임.jpg",
+".\images\그램.jpg",
+".\images\달러.jpg",
+".\images\박스.jpg",
+".\images\스푼.jpg",
+".\images\컵.jpg",
+".\images\세트.jpeg",
+".\images\페이지.jpg",
+".\images\리터.png",
+".\images\미터.jpg",
+".\images\null.png",
+".\images\센티미터.png",
+".\images\인치.png",
+".\images\킬로그램.jpg",
+".\images\포인트.jpg",
+];
+-->
+
+var questions = [
+   ///고유어계 고빈도 분류사///
+   new Question("<img src=\"./images/가지.jpg\" style=\"width:300px; height:200px\">", '나는 이 () 가지 맛 우유 중에서 초코 우유를 가장 즐겨 마신다.', ['세', '셋', '삼'], '세'),
+   new Question("<img src=\"./images/군데.jpg\" style=\"width:300px; height:200px\">", '죽전역에는 () 군데의 출입구가 있습니다.', ['육', '여섯', '다섯'], '여섯'),
+   new Question("<img src=\"./images/그릇.jpg\" style=\"width:300px; height:200px\">", '오트밀 () 그릇', ['일', '하나', '한'], '한'),
+   new Question("<img src=\"./images/그루.jpg\" style=\"width:300px; height:200px\">", '책 표지에 () 그루의 나무가 있습니다.', ['구', '아홉', '아흔'], '아홉'),
+   new Question("<img src=\"./images/개비.jpg\" style=\"width:300px; height:200px\">", '성냥 () 개비', ['세', '삼', '셋'], '세'),
+   new Question("<img src=\"./images/마리.jpg\" style=\"width:300px; height:200px\">", '강아지 () 마리', ['오', '다섯', '여섯'], '다섯'),
+   new Question("<img src=\"./images/송이.jpg\" style=\"width:300px; height:200px\">", '포도 () 송이', ['두', '둘', '이'], '두'),
+   new Question("<img src=\"./images/자루.jpg\" style=\"width:300px; height:200px\">", '나는 연필 () 자루를 가지고 있어.', ['팔', '여든', '여덟'], '여덟'),
+   new Question("<img src=\"./images/켤레.png\" style=\"width:300px; height:200px\">", '양말 () 켤레', ['구', '아홉', '아흔'], '아홉'),
+   new Question("<img src=\"./images/통.jpg\" style=\"width:300px; height:200px\">", '과자 () 통', ['삼', '세', '쉰'], '세'),
+   new Question("<img src=\"./images/방울.png\" style=\"width:300px; height:200px\">", '눈물 () 방울', ['세', '삼', '셋'], '세'),
+   new Question("<img src=\"./images/보루.jpg\" style=\"width:300px; height:200px\">", '담배 () 보루', ['육', '여섯', '예순'], '여섯'),
+   new Question("<img src=\"./images/바구니.jpg\" style=\"width:300px; height:200px\">", '과일 () 바구니', ['일', '하나', '한'], '한'),
+   new Question("<img src=\"./images/발.png\" style=\"width:300px; height:200px\">", '() 발 뒤로 물러서다.', ['하나', '한', '일'], '한'),
+   new Question("<img src=\"./images/뼘.png\" style=\"width:300px; height:200px\">", '그 애가 너보다 적어도 () 뼘 정도는 크다.', ['둘', '이', '두'], '두'),
+   new Question("<img src=\"./images/사람.jpg\" style=\"width:300px; height:200px\">", '() 사람이 함께 있다.', ['십이', '열둘', '열두'], '열두'),
+   new Question("<img src=\"./images/뿌리.jpg\" style=\"width:300px; height:200px\">", '도라지 () 뿌리', ['십', '열', '일십'], '열'),
+   new Question("<img src=\"./images/손.jfif\" style=\"width:300px; height:200px\">", '() 손 모아 기도하다.', ['둘', '이', '두'], '두'),
+   new Question("<img src=\"./images/알.jfif\" style=\"width:300px; height:200px\">", '계란 () 알', ['육', '예순', '여섯'], '여섯'),
+   new Question("<img src=\"./images/줄.jpg\" style=\"width:300px; height:200px\">", '김밥 () 줄', ['오', '다섯', '넷'], '다섯'),
+   new Question("<img src=\"./images/짝.png\" style=\"width:300px; height:200px\">", '장갑 () 짝', ['일', '한', '하나'], '한'),
+   new Question("<img src=\"./images/다발.png\" style=\"width:300px; height:200px\">", '부케 () 다발', ['넷', '사', '네'], '네'),
+   new Question("<img src=\"./images/달.png\" style=\"width:300px; height:200px\">", '그 사람이 떠난 지 () 달이 다 되었다.', ['일곱', '칠', '첫'], '일곱'),
+   new Question("<img src=\"./images/벌.jpg\" style=\"width:300px; height:200px\">", '옷 () 벌이 옷장에 걸려있다.', ['네', '넷', '사'], '네'),
+   new Question("<img src=\"./images/null.png\" style=\"width:300px; height:200px\">", '데뷔 후 () 번째 독주회를 열다.', ['첫', '하나', '일'], '첫'),
+   new Question("<img src=\"./images/null.png\" style=\"width:300px; height:200px\">", '그는 그녀를 () 번째 만나던 날 갑작스럽게 청혼했다.', ['세', '셋', '삼'], '세'),
+   new Question("<img src=\"./images/null.png\" style=\"width:300px; height:200px\">", '장남은 집안의 () 째 남자아이를 말합니다.', ['첫', '일', '한'], '첫'),
+   new Question("<img src=\"./images/null.png\" style=\"width:300px; height:200px\">", '() 째, 복도에서 떠들지 않도록 합니다.', ['둘', '사', '세'], '둘'),
+   new Question("<img src=\"./images/식구.jpg\" style=\"width:300px; height:200px\">", '우리 가족은 () 식구 입니다.', ['오', '다섯', '닷'], '다섯'),
+   new Question("<img src=\"./images/곳.png\" style=\"width:300px; height:200px\">", '이 학교에는 흡연장소가 총 () 곳이 있습니다.', ['십오', '열다섯', '오십'], '열다섯'),
+   new Question("<img src=\"./images/발.png\" style=\"width:300px; height:200px\">", '나는 놀라서 () 걸음 물러섰다.', ['한', '첫', '하나'], '한'),
+   new Question("<img src=\"./images/포기.jpg\" style=\"width:300px; height:200px\">", '배추 () 포기', ['십삼', '열셋', '열세'], '열세'),
+   new Question("<img src=\"./images/null.png\" style=\"width:300px; height:200px\">", '그가 떠나간 지도 벌써 () 해가 지났다.', ['일곱', '칠', '하나'], '일곱'),
+   new Question("<img src=\"./images/null.png\" style=\"width:300px; height:200px\">", '보통 ()살 때 초등학교에 입학하게 된다.', ['팔', '여덟', '구'], '여덟'),
+   
+///한자어계 고빈도 분류사///
+new Question("<img src=\"./images/인분.png\" style=\"width:300px; height:200px\">", '이 우동은 () 인분이야.', ['넷', '네', '사'], '사'),
+new Question("<img src=\"./images/쌍.jpg\" style=\"width:300px; height:200px\">", '() 쌍의 연인들', ['네', '넷', '사'], '네'),
+new Question("<img src=\"./images/초.jpg\" style=\"width:300px; height:200px\">", '() 초 후에 공개됩니다.', ['육십', '예순', '십육'], '육십'),
+new Question("<img src=\"./images/층.jpg\" style=\"width:300px; height:200px\">", '밀폐용기는 () 층에 있습니다.', ['일곱', '칠', '일흔'], '칠'),
+new Question("<img src=\"./images/세.jpg\" style=\"width:300px; height:200px\">", '이 영화는 () 세 이상 관람가입니다.', ['십오', '오십', '열다섯'], '십오'),
+new Question("<img src=\"./images/원.jpg\" style=\"width:300px; height:200px\">", '() 원', ['열', '십일', '십'], '십'),
+new Question("<img src=\"./images/개월.jpg\" style=\"width:300px; height:200px\">", '()개월 아기 발달', ['스물네', '이십사', '스물넷'], '이십사'),
+new Question("<img src=\"./images/위.jpg\" style=\"width:300px; height:200px\">", '취업률 전국 ()위', ['일', '한', '하나'], '일'),
+new Question("<img src=\"./images/칸.png\" style=\"width:300px; height:200px\">", '() 칸짜리 서랍', ['삼', '셋', '세'], '세'),
+new Question("<img src=\"./images/배.jpg\" style=\"width:300px; height:200px\">", '이탈리아 전기차 판매량 () 배 증가', ['둘', '두', '이'], '두'),
+new Question("<img src=\"./images/학년,반.png\" style=\"width:300px; height:200px\">", '()학년 ()반', ['다섯-일', '오-하나', '오-일'], '오-일'),
+new Question("<img src=\"./images/시,분.jpg\" style=\"width:300px; height:200px\">", '()시 ()분', ['열-십', '십-열', '열-열'], '열-십'),
+new Question("<img src=\"./images/시, 분(2).png\" style=\"width:300px; height:200px\">", '()시 ()분', ['열하나-열다섯', '열하나-십오', '열한-십오'], '열한-십오'),
+new Question("<img src=\"./images/세기.jpg\" style=\"width:300px; height:200px\">", '동양철학과 () 세기 문명', ['스물한', '스물하나', '이십일'], '이십일'),
+new Question("<img src=\"./images/시간.png\" style=\"width:300px; height:200px\">", '나는 () 시간 동안 책을 읽었다.', ['다섯', '오', '넷'], '다섯'),
+new Question("<img src=\"./images/월, 일.jpg\" style=\"width:300px; height:200px\">", '오늘은 ()월 ()일이다.', ['칠-칠', '칠-일곱', '일곱-일곱'], '칠-칠'),
+new Question("<img src=\"./images/월, 일.png\" style=\"width:300px; height:200px\">", '오늘 날짜는 ()월 ()일이다.', ['열두-한', '십이-일', '열둘-하나'], '십이-일'),
+new Question("<img src=\"./images/인.jfif\" style=\"width:300px; height:200px\">", '() 인 이상 집합 금지', ['다섯', '오', '닷'], '오'),
+new Question("<img src=\"./images/잔.jpg\" style=\"width:300px; height:200px\">", '와인 () 잔', ['구', '아홉', '아흔'], '아홉'),
+new Question("<img src=\"./images/null.png\" style=\"width:300px; height:200px\">", '임신 () 주차 아기의 모습', ['열둘', '열두', '십이'], '십이'),
+new Question("<img src=\"./images/종류.jfif\" style=\"width:300px; height:200px\">", '() 종류의 커피', ['여덟', '팔', '여든'], '여덟'),
+new Question("<img src=\"./images/주년.jpg\" style=\"width:300px; height:200px\">", '개교 () 주년 비전 선포식', ['칠십', '일흔', '십칠'], '칠십'),
+new Question("<img src=\"./images/종.jpg\" style=\"width:300px; height:200px\">", '근대 () 종 경기', ['다섯', '오', '여섯'], '오'),
+new Question("<img src=\"./images/null.png\" style=\"width:300px; height:200px\">", '할아버지께서는 암으로 수수을 () 차례나 받으셨다.', ['네', '넷', '사'], '네'),
+new Question("<img src=\"./images/표.jpg\" style=\"width:300px; height:200px\">", '총 () 표의 반대표가 나왔다.', ['여덟', '팔', '여든'], '여덟'),
+new Question("<img src=\"./images/호.png\" style=\"width:300px; height:200px\">", '제 () 호 활동 및 소식지', ['둘', '이', '두'], '이'),
+new Question("<img src=\"./images/회.jpg\" style=\"width:300px; height:200px\">", '()회 예고', ['육', '여섯', '유'], '육'),
+new Question("<img src=\"./images/개.jfif\" style=\"width:300px; height:200px\">", '바나나 () 개', ['한', '일', '하나'], '한'),
+new Question("<img src=\"./images/개2.jpg\" style=\"width:300px; height:200px\">", '햄스터는 다리가 () 개입니다.', ['넷', '네', '사'], '네'),
+new Question("<img src=\"./images/건.jpg\" style=\"width:300px; height:200px\">", '부정행위 () 건', ['열여섯', '여섯', '십육'], '열여섯'),
+new Question("<img src=\"./images/권.jpg\" style=\"width:300px; height:200px\">", '책 () 권', ['오', '다섯', '여섯'], '다섯'),
+new Question("<img src=\"./images/근.png\" style=\"width:300px; height:200px\">", '쇠고기 () 근 주세요.', ['둘', '한', '삼'], '한'),
+new Question("<img src=\"./images/급.png\" style=\"width:300px; height:200px\">", '() 급공무원', ['일곱', '칠', '일흔'], '칠'),
+new Question("<img src=\"./images/과목.jpg\" style=\"width:300px; height:200px\">", '월요일에는 총 () 과목의 수업이 있다.', ['오', '쉰', '다섯'], '다섯'),
+new Question("<img src=\"./images/교시.jpg\" style=\"width:300px; height:200px\">", '금요일 ()교시는 수학이다.', ['하나', '일', '한'], '일'),
+new Question("<img src=\"./images/null.png\" style=\"width:300px; height:200px\">", '초등학교는 총 ()년 교육 과정이다.', ['여섯', '육', '다섯'], '육'),
+new Question("<img src=\"./images/대.jpg\" style=\"width:300px; height:200px\">", '() 대 생활수칙', ['아홉', '구', '아흔'], '구'),
+new Question("<img src=\"./images/동.jfif\" style=\"width:300px; height:200px\">", '장암캐슬 () 동', ['백둘', '백두', '백이'], '백이'),
+new Question("<img src=\"./images/명.png\" style=\"width:300px; height:200px\">", '() 명의 아이들', ['네', '넷', '사'], '네'),
+new Question("<img src=\"./images/번.png\" style=\"width:300px; height:200px\">", '() 번 버스', ['세', '삼', '셋'], '삼'),
+new Question("<img src=\"./images/병.jpg\" style=\"width:300px; height:200px\">", '소주 () 병', ['구', '아홉', '아흔'], '아홉'),
+
+
+
+///외래어계 고빈도 분류사///
+new Question("<img src=\"./images/게임.jpg\" style=\"width:300px; height:200px\">", '우승자는 총 () 게임을 치른다.', ['삼', '셋', '세'], '세'),
+new Question("<img src=\"./images/그램.jpg\" style=\"width:300px; height:200px\">", '밀가루 () 그램', ['백십', '백열', '십백'], '백십'),
+new Question("<img src=\"./images/달러.jpg\" style=\"width:300px; height:200px\">", '() 달러', ['스물', '십이', '이십'], '이십'),
+new Question("<img src=\"./images/박스.jpg\" style=\"width:300px; height:200px\">", '() 박스', ['두', '둘', '이'], '두'),
+new Question("<img src=\"./images/스푼.jpg\" style=\"width:300px; height:200px\">", '초콜릿 가루 () 스푼', ['삼', '세', '셋'], '셋'),
+new Question("<img src=\"./images/컵.jpg\" style=\"width:300px; height:200px\">", '물 () 컵', ['일', '한', '하나'], '한'),
+new Question("<img src=\"./images/세트.jpeg\" style=\"width:300px; height:200px\">", '선물 () 세트', ['두', '이', '둘'], '두'),
+new Question("<img src=\"./images/페이지.jpg\" style=\"width:300px; height:200px\">", '이 챕터는 () 페이지부터 시작된다.', ['열일곱', '십칠', '칠십'], '십칠'),
+new Question("<img src=\"./images/칼로리.png\" style=\"width:300px; height:200px\">", '1개 당 () 칼로리', ['이백사십', '이백십사', '이백마흔'], '이백사십'),
+new Question("<img src=\"./images/리터.png\" style=\"width:300px; height:200px\">", '() 리터짜리 아이스박스', ['십사', '사십', '마흔'], '사십'),
+new Question("<img src=\"./images/미터.jpg\" style=\"width:300px; height:200px\">", '()미터 파도에 ()미터 물폭탄', ['팔-일', '여덟-일', '팔-한'], '팔-일'),
+new Question("<img src=\"./images/null.png\" style=\"width:300px; height:200px\">", '() 바이트는 8 비트이다.', ['일', '하나', '한'], '일'),
+new Question("<img src=\"./images/센티미터.png\" style=\"width:300px; height:200px\">", '() 센티미터 자', ['열다섯', '십오', '오십'], '십오'),
+new Question("<img src=\"./images/인치.png\" style=\"width:300px; height:200px\">", '() 인치의 허리', ['스물넷', '스물사', '이십사'], '이십사'),
+new Question("<img src=\"./images/킬로그램.jpg\" style=\"width:300px; height:200px\">", '체중 () 킬로그램', ['예순여섯', '육십여섯', '육십육'], '육십육'),
+new Question("<img src=\"./images/포인트.jpg\" style=\"width:300px; height:200px\">", '() 포인트가 적립되어있다.', ['오백팔십팔', '오백여든여덟', '오백팔십여덟'], '오백팔십팔')
+];
+
+
+function display_image(src, width, height, alt){
+var picture = document.createElement("image");
+   picture.src = src;
+   picture.width = width;
+   picture.height = height;
+   picture.alt = alt;
+   document.body.appendChild(picture);
+}
+
+// 퀴즈 객체 생성
+var quiz = new Quiz(questions);
+var rand = Math.floor(Math.random() * questions.length)
+var one = quiz.questions[rand];
+questions.splice(rand, 1);
+
+// 문제 출력 함수
+function updateQuiz() {
+   var images = document.getElementById('image')
+   var question = document.getElementById('question');
+   var idx = quiz.questionIndex + 1;
+   var choice = document.querySelectorAll('.btn');
+   rand = Math.floor(Math.random() * questions.length);
+   one = quiz.questions[rand];
+   questions.splice(rand, 1);
+
+   // 사진 출력 document.write('<img src="'+one.image+'">')
+   images.innerHTML = one.image;
+
+   // 문제 출력
+   question.innerHTML = idx + ') ' + one.text;
+
+   // 선택지 출력
+   for (var i = 0; i < 3; i++) {
+      choice[i].innerHTML = one.choice[i];
+   }
+   
+   progress();
+      
+}
+
+// 진행상황 출력 함수
+function progress() {
+   var progress = document.getElementById("progress");
+   progress.innerHTML = '문제 ' + (quiz.questionIndex + 1) + '/ ' + '10';
+}
+
+var btn = document.querySelectorAll('.btn');
+
+// 입력 및 정답 확인 함수
+function checkAnswer(i) {
+   btn[i].addEventListener('click', function() {
+      var answer = btn[i].innerText;
+
+      if (quiz.correctAnswer(answer)) {;
+         quiz.score++;
+      } else {
+         quiz.fail.push(quiz.questionIndex + 1);
+         quiz.failQuest.push(one.text);
+         quiz.failAnswer.push(one.answer);
+      }
+
+      if ((quiz.questionIndex < quiz.questions.length - 1) && (quiz.questionIndex < 9)) {
+         quiz.questionIndex++;
+         updateQuiz();
+      } else {
+         result();
+      }
+   });
+}
+
+
+function result() {
+   var quizDiv = document.getElementById('quiz');
+   var per = parseInt((quiz.score * 100) / 10);
+   var txt = '<h4 id="score">'+per+'점</h4>';
+   var hund = '<h4 id="score">'+per+'점'+'</h4>';
+   quizDiv.innerHTML = txt;
+   
+   // 점수별 결과 텍스트
+   if (per == 100) {
+      hund+='<a>만점입니다!</a><br><a>다음 단계로 넘어갈까요?</a><hr>' + '<button type="button" class="resultBtn" onClick="location.href=\'index.html\'">홈으로</button>' + '&nbsp;&nbsp; <button type="button" class="resultBtn" onClick="location.href=\'quiz_demo.html\'">다시풀기</button>'+'<br><button type="button" class="resultBtn" onClick="location.href=\'level.html\'">난이도 선택</button>' + '&nbsp;&nbsp;&nbsp;<button type="button" class="resultBtn" onClick="location.href=\'studyLevel.html\'">공부하기</button>'
+      quizDiv.innerHTML = hund;
+      
+   } else if (per == 90) {
+      txt+='<a>만점에 근접했습니다!</a><br><a>다시 시도하여 만점에 도전하세요!</a><hr>' + ' <button type="button" class="resultBtn" onClick="location.href=\'index.html\'">홈으로</button>' + '&nbsp;&nbsp; <button type="button" class="resultBtn" onClick="location.href=\'quiz_demo.html\'">다시풀기</button>'+'<br><button type="button" class="resultBtn" onClick="location.href=\'level.html\'">난이도 선택</button>' + '&nbsp;&nbsp;&nbsp;<button type="button" class="resultBtn" onClick="location.href=\'studyLevel.html\'">공부하기</button>'+'<br><button type="button" class="answer_lst_wrap" onclick="collapse(this);>틀린 문제 다시 보기</button><div class="ans"><p> 틀린 문제<br><br>1. '+quiz.failQuest[0]+'</p><p>'+quiz.failAnswer[0]+'</p></div>'
+      quizDiv.innerHTML = txt;
+   }
+   else if (per == 80) {
+      txt+='<a>만점에 근접했습니다!</a><br><a>다시 시도하여 만점에 도전하세요!!</a><hr>' + ' <button type="button" class="resultBtn" onClick="location.href=\'index.html\'">홈으로</button>' + '&nbsp;&nbsp; <button type="button" class="resultBtn" onClick="location.href=\'quiz_demo.html\'">다시풀기</button>'+'<br><button type="button" class="resultBtn" onClick="location.href=\'level.html\'">난이도 선택</button>' + '&nbsp;&nbsp;&nbsp;<button type="button" class="resultBtn" onClick="location.href=\'studyLevel.html\'">공부하기</button>'+ '<br><button type="button" class="answer_lst_wrap" onclick="collapse(this);>틀린 문제 다시 보기</button><div class="ans"><p>틀린 문제<br><br>1. '+quiz.failQuest[0]+'</p><p>'+quiz.failAnswer[0]+'</p><br><p>2. '+quiz.failQuest[1]+'</p><p>'+quiz.failAnswer[1]+'</p></div>'
+      quizDiv.innerHTML = txt;
+
+   }  else if (per == 70) {
+      txt+='<a>다소 아쉬운 점수입니다.</a><br><a>틀린 문제를 복습하고 만점에 도전하세요!</a><hr>' + ' <button type="button" class="resultBtn" onClick="location.href=\'index.html\'">홈으로</button>' + '&nbsp;&nbsp; <button type="button" class="resultBtn" onClick="location.href=\'quiz_demo.html\'">다시풀기</button>'+'<br><button type="button" class="resultBtn" onClick="location.href=\'level.html\'">난이도 선택</button>' + '&nbsp;&nbsp;&nbsp;<button type="button" class="resultBtn" onClick="location.href=\'studyLevel.html\'">공부하기</button>'+ '<br><button type="button" class="answer_lst_wrap" onclick="collapse(this);>틀린 문제 다시 보기</button><div class="ans"><p>틀린 문제<br><br>1. '+quiz.failQuest[0]+'</p><p>'+quiz.failAnswer[0]+'</p><br><p>2. '+quiz.failQuest[1]+'</p><p>'+quiz.failAnswer[1]+'</p><br><p>3. '+quiz.failQuest[2]+'</p></div>'
+      quizDiv.innerHTML = txt;
+
+   } else if (per == 60) {
+      txt+='<a>다소 아쉬운 점수입니다.</a><br><a>틀린 문제를 복습하고 만점에 도전하세요!</a><hr>' + ' <button type="button" class="resultBtn" onClick="location.href=\'index.html\'">홈으로</button>' + '&nbsp;&nbsp; <button type="button" class="resultBtn" onClick="location.href=\'quiz_demo.html\'">다시풀기</button>'+'<br><button type="button" class="resultBtn" onClick="location.href=\'level.html\'">난이도 선택</button>' + '&nbsp;&nbsp;&nbsp;<button type="button" class="resultBtn" onClick="location.href=\'studyLevel.html\'">공부하기</button>'+ '<br><button type="button" class="answer_lst_wrap" onclick="collapse(this);>틀린 문제 다시 보기</button><div class="ans"><p>틀린 문제<br><br>1. '+quiz.failQuest[0]+'</p><p>'+quiz.failAnswer[0]+'</p><br><p>2. '+quiz.failQuest[1]+'</p><p>'+quiz.failAnswer[1]+'</p><br><p>3. '+quiz.failQuest[2]+'</p><p>'+quiz.failAnswer[2]+'</p><br><p>4. '+quiz.failQuest[3]+'</p><p>'+quiz.failAnswer[3]+'</p></div>'
+      quizDiv.innerHTML = txt;
+
+   } else if (per == 50) {
+      txt+='<a>졸면서 푼건 아니죠?</a><br><a>틀린 문제를 복습하고 점수를 높여봅시다.</a><hr>' + ' <button type="button" class="resultBtn" onClick="location.href=\'index.html\'">홈으로</button>' + '&nbsp;&nbsp; <button type="button" class="resultBtn" onClick="location.href=\'quiz_demo.html\'">다시풀기</button>'+'<br><button type="button" class="resultBtn" onClick="location.href=\'level.html\'">난이도 선택</button>' + '&nbsp;&nbsp;&nbsp;<button type="button" class="resultBtn" onClick="location.href=\'studyLevel.html\'">공부하기</button>'+'<br><button type="button" class="answer_lst_wrap" onclick="collapse(this);>틀린 문제 다시 보기</button><div class="ans"><p>틀린 문제<br><br>1. '+quiz.failQuest[0]+'</p><p>'+quiz.failAnswer[0]+'</p><br><p>2. '+quiz.failQuest[1]+'</p><p>'+quiz.failAnswer[1]+'</p><br><p>3. '+quiz.failQuest[2]+'</p><p>'+quiz.failAnswer[2]+'</p><br><p>4. '+quiz.failQuest[3]+'</p><p>'+quiz.failAnswer[3]+'</p><br><p>5. '+quiz.failQuest[4]+'</p><p>'+quiz.failAnswer[4]+'</p></div>'
+      quizDiv.innerHTML = txt;
+
+   } else if (per == 40) {
+      txt+='<a>졸면서 푼건 아니죠?</a><br><a>틀린 문제를 복습하고 점수를 높여봅시다.</a><hr>' + ' <button type="button" class="resultBtn" onClick="location.href=\'index.html\'">홈으로</button>' + '&nbsp;&nbsp; <button type="button" class="resultBtn" onClick="location.href=\'quiz_demo.html\'">다시풀기</button>'+'<br><button type="button" class="resultBtn" onClick="location.href=\'level.html\'">난이도 선택</button>' + '&nbsp;&nbsp;&nbsp;<button type="button" class="resultBtn" onClick="location.href=\'studyLevel.html\'">공부하기</button>'+'<br><button type="button" class="answer_lst_wrap" onclick="collapse(this);>틀린 문제 다시 보기</button><div class="ans"><p>틀린 문제<br><br>1. '+quiz.failQuest[0]+'</p><p>'+quiz.failAnswer[0]+'</p><br><p>2. '+quiz.failQuest[1]+'</p><p>'+quiz.failAnswer[1]+'</p><br><p>3. '+quiz.failQuest[2]+'</p><p>'+quiz.failAnswer[2]+'</p><br><p>4. '+quiz.failQuest[3]+'</p><p>'+quiz.failAnswer[3]+'</p><br><p>5. '+quiz.failQuest[4]+'</p><p>'+quiz.failAnswer[4]+'</p><br><p>6. '+quiz.failQuest[5]+'</p><p>'+quiz.failAnswer[5]+'</p></div>'
+      quizDiv.innerHTML = txt;
+
+   }else if (per == 30) {
+      txt+='<a>포기란 배추셀 때 쓰는 말!.</a><br><a>문법을 공부하고 다시 한번 풀어보세요.</a><hr>' + ' <button type="button" class="resultBtn" onClick="location.href=\'index.html\'">홈으로</button>' + '&nbsp;&nbsp; <button type="button" class="resultBtn" onClick="location.href=\'quiz_demo.html\'">다시풀기</button>'+'<br><button type="button" class="resultBtn" onClick="location.href=\'level.html\'">난이도 선택</button>' + '&nbsp;&nbsp;&nbsp;<button type="button" class="resultBtn" onClick="location.href=\'studyLevel.html\'">공부하기</button>'+'<br><button type="button" class="answer_lst_wrap" onclick="collapse(this);>틀린 문제 다시 보기</button><div class="ans"><p>틀린 문제<br><br>1. '+quiz.failQuest[0]+'</p><p>'+quiz.failAnswer[0]+'</p><br><p>2. '+quiz.failQuest[1]+'</p><p>'+quiz.failAnswer[1]+'</p><br><p>3. '+quiz.failQuest[2]+'</p><p>'+quiz.failAnswer[2]+'</p><br><p>4. '+quiz.failQuest[3]+'</p><p>'+quiz.failAnswer[3]+'</p><br><p>5. '+quiz.failQuest[4]+'</p><p>'+quiz.failAnswer[4]+'</p><br><p>6. '+quiz.failQuest[5]+'</p><p>'+quiz.failAnswer[5]+'</p><br><p>7. '+quiz.failQuest[6]+'</p><p>'+quiz.failAnswer[6]+'</p></div>'
+      quizDiv.innerHTML = txt;
+   } else if (per >= 20) {
+      txt+='<a>포기란 배추셀 때 쓰는 말!.</a><br><a>문법을 공부하고 다시 한번 풀어보세요.</a><hr>' + '<button type="button" class="resultBtn" onClick="location.href=\'index.html\'">홈으로</button>' + '&nbsp;&nbsp; <button type="button" class="resultBtn" onClick="location.href=\'quiz_demo.html\'">다시풀기</button>'+'<br><button type="button" class="resultBtn" onClick="location.href=\'level.html\'">난이도 선택</button>' + '&nbsp;&nbsp;&nbsp;<button type="button" class="resultBtn" onClick="location.href=\'studyLevel.html\'">공부하기</button>'+ '<br><button type="button" class="answer_lst_wrap" onclick="collapse(this);>틀린 문제 다시 보기</button><div class="ans"><p>틀린 문제<br><br>1. '+quiz.failQuest[0]+'</p><p>'+quiz.failAnswer[0]+'</p><br><p>2. '+quiz.failQuest[1]+'</p><p>'+quiz.failAnswer[1]+'</p><br><p>3. '+quiz.failQuest[2]+'</p><p>'+quiz.failAnswer[2]+'</p><br><p>4. '+quiz.failQuest[3]+'</p><p>'+quiz.failAnswer[3]+'</p><br><p>5. '+quiz.failQuest[4]+'</p><p>'+quiz.failAnswer[4]+'</p><br><p>6. '+quiz.failQuest[5]+'</p><p>'+quiz.failAnswer[5]+'</p><br><p>7. '+quiz.failQuest[6]+'</p><p>'+quiz.failAnswer[6]+'</p><br><p>8. '+quiz.failQuest[7]+'</p><p>'+quiz.failAnswer[7]+'</p></div>'
+      quizDiv.innerHTML = txt;
+   } else if (per == 10) {
+      txt+='<a>포기란 배추셀 때 쓰는 말!.</a><br><a>문법을 공부하고 다시 한번 풀어보세요.</a><hr>' + ' <button type="button" class="resultBtn" onClick="location.href=\'index.html\'">홈으로</button>' + '&nbsp;&nbsp; <button type="button" class="resultBtn" onClick="location.href=\'quiz_demo.html\'">다시풀기</button>'+'<br><button type="button" class="resultBtn" onClick="location.href=\'level.html\'">난이도 선택</button>' + '&nbsp;&nbsp;&nbsp;<button type="button" class="resultBtn" onClick="location.href=\'studyLevel.html\'">공부하기</button>'+'<br><button type="button" class="answer_lst_wrap" onclick="collapse(this);>틀린 문제 다시 보기</button><div class="ans"><p>틀린 문제<br><br>1. '+quiz.failQuest[0]+'</p><p>'+quiz.failAnswer[0]+'</p><br><p>2. '+quiz.failQuest[1]+'</p><p>'+quiz.failAnswer[1]+'</p><br><p>3. '+quiz.failQuest[2]+'</p><p>'+quiz.failAnswer[2]+'</p><br><p>4. '+quiz.failQuest[3]+'</p><p>'+quiz.failAnswer[3]+'</p><br><p>5. '+quiz.failQuest[4]+'</p><p>'+quiz.failAnswer[4]+'</p><br><p>6. '+quiz.failQuest[5]+'</p><p>'+quiz.failAnswer[5]+'</p><br><p>7. '+quiz.failQuest[6]+'</p><p>'+quiz.failAnswer[6]+'</p><br><p>8. '+quiz.failQuest[7]+'</p><p>'+quiz.failAnswer[7]+'</p><br><p>9. '+quiz.failQuest[8]+'</p><p>'+quiz.failAnswer[8]+'</p></div>'
+      quizDiv.innerHTML = txt;
+   } else if (per == 0) {
+      txt+='<a>포기란 배추셀 때 쓰는 말!.</a><br><a>문법을 공부하고 다시 한번 풀어보세요.</a><hr>' + ' <button type="button" class="resultBtn" onClick="location.href=\'index.html\'">홈으로</button>' + '&nbsp;&nbsp; <button type="button" class="resultBtn" onClick="location.href=\'quiz_demo.html\'">다시풀기</button>'+'<br><button type="button" class="resultBtn" onClick="location.href=\'level.html\'">난이도 선택</button>' + '&nbsp;&nbsp;&nbsp;<button type="button" class="resultBtn" onClick="location.href=\'studyLevel.html\'">공부하기</button>'+'<br><button type="button" class="answer_lst_wrap" onclick="collapse(this);>틀린 문제 다시 보기</button><div class="ans"><p>틀린 문제<br><br>1. '+quiz.failQuest[0]+'</p><p>'+quiz.failAnswer[0]+'</p><br><p>2. '+quiz.failQuest[1]+'</p><p>'+quiz.failAnswer[1]+'</p><br><p>3. '+quiz.failQuest[2]+'</p><p>'+quiz.failAnswer[2]+'</p><br><p>4. '+quiz.failQuest[3]+'</p><p>'+quiz.failAnswer[3]+'</p><br><p>5. '+quiz.failQuest[4]+'</p><p>'+quiz.failAnswer[4]+'</p><br><p>6. '+quiz.failQuest[5]+'</p><p>'+quiz.failAnswer[5]+'</p><br><p>7. '+quiz.failQuest[6]+'</p><p>'+quiz.failAnswer[6]+'</p><br><p>8. '+quiz.failQuest[7]+'</p><p>'+quiz.failAnswer[7]+'</p><br><p>9. '+quiz.failQuest[8]+'</p><p>'+quiz.failAnswer[8]+'</p><br><p>10. '+quiz.failQuest[9]+'</p><p>'+quiz.failAnswer[9]+'</p></div>'
+      quizDiv.innerHTML = txt;
+   }
+}
+
+
+
+//틀린문제 출력
+//+'<h4> 틀린 문제: '+ quiz.fail + '번</h4>' + '틀린문제: ' + quiz.failQuest 
+
+for (var i = 0; i < btn.length; i++) {
+   checkAnswer(i);
+}
+
+updateQuiz();
+
+    </script>
+
+</body>
+</html>

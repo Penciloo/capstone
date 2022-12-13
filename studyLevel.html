@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>수 표현 퀴즈</title>
+
+        <style>
+           @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Do+Hyeon&family=Hahmlet:wght@100&family=Song+Myung&display=swap');
+           
+
+           header {
+                font-family: 'Do Hyeon', sans-serif;
+                font-size: 30px;
+                padding: 20px;
+                color: white;
+                background: #000069;
+                font-weight: bold;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            h1{
+                display: inline-block;
+                vertical-align: middle;
+                color: white;
+                margin: 0.5rem;
+                padding: 0;
+            }
+
+            
+            ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                display: flex;
+            }
+
+            
+            li.icon {
+                flex-basis: 25%;
+            }
+            
+            
+            a {
+                display: block;
+                text-align: center;
+                margin: .25rem;
+                padding: .5rem 1rem;
+                text-decoration: none;
+                font-weight: bold;
+                font-size: 40px;
+                color: white;
+                background: #000069;
+            }
+
+            a:hover {
+                background: white;
+                color: black;
+                transition: 0.3s;
+            }
+            
+            .contents{
+                font-family: 'Do Hyeon', sans-serif;
+                font-size: 30px;
+                display: grid;
+                place-items: center;
+            }
+
+            .btns {
+                width: 100%;
+                height: 100%;
+                text-align: center;
+            }
+
+            .btn{
+                display: inline-block; 
+                font-family: 'Do Hyeon', sans-serif;
+                font-size: 35px;
+                border: 5px solid skyblue ;
+                border-radius: 30px;
+                background-color: white;
+                width: 50%;
+                height: 120%;
+            }
+
+            .btn:hover{
+                color: #fff;
+                background-color: #000069;
+                transition: 0.5s;
+            }
+            
+
+            .grid_title{
+                padding-top: 50px;
+                font-family: 'Do Hyeon', sans-serif;
+                font-size: 100px;
+                font-weight: 900;
+                place-items: center;
+	            display: grid;
+                width: 100%;
+	            height: 280px;
+            }
+
+            .intro{
+                font-family: inherit;
+                font-size: 23px;
+                text-align: center;
+            }
+
+        </style>
+    </head>
+    
+    <header>
+        <h1 href="index.html">한국어 수 표현 퀴즈 - CNU Linguistics</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">메인</a></li>
+                <li><a href="introduce.html">소개</a></li>
+                <li><a href="contact.html">문의</a></li>
+            </ul>
+        </nav>
+    </header>
+        <body>
+            <div class="grid_title">
+                <div>한국어 수 표현 익히기</div>
+                <div class="intro">충남대학교 언어학과에서 정리한 '한국어 수 표현'에 대한 문법을 공부하세요! <br> 하단 버튼을 통해 퀴즈의 난이도 기준도 확인하실 수 있습니다.</div>
+            </div>
+            <br><br><br>
+            <div class="contents">
+                <div><img src="study01.png" alt="수량사 표현"></div>
+                <div><img src="study02.png" alt="수량사 표현"></div>
+                <div><img src="study03.png" alt="수량사 표현"></div>
+                <div><img src="study04.png" alt="수량사 표현"></div>
+                <div><img src="study05.png" alt="수량사 표현"></div>
+                <br>
+    </div>
+            <br>
+            <div class="btns">
+                <button class="btn" onclick="location.replace('level.html')">문제 풀기</button>
+                <br><br><br>
+                <button class="btn" onclick="location.replace('index.html')">돌아가기</button>
+            </div>
+
+
+        <!--
+        <div><hr><br>난이도 선정 기준</div>
+        </div>
+        <br>
+        <div class="btns">
+                <button class="btn" onclick="location.replace('lowLevelStudy.html')">난이도 하</button>&nbsp;&nbsp;&nbsp;
+                <button class="btn" onclick="location.replace('middleLevelStudy.html')">난이도 중</button>&nbsp;&nbsp;&nbsp;
+                <button class="btn" onclick="location.replace('highLevelStudy.html')">난이도 상</button>
+        </div>
+        -->
+        <br>
+        <br>
+    </body>
+        
+</html>

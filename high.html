@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Hahmlet:wght@100&display=swap');
+     
+      header {
+                font-family: 'Do Hyeon', sans-serif;
+                font-size: 30px;
+                padding: 20px;
+                color: white;
+                background: #000069;
+                font-weight: bold;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            h1{
+                display: inline-block;
+                vertical-align: middle;
+                color: white;
+                margin: 0.5rem;
+                padding: 0;
+            }
+
+            
+            ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                display: flex;
+            }
+
+            
+            li.icon {
+                flex-basis: 25%;
+            }
+            
+            
+            a {
+                display: block;
+                text-align: center;
+                margin: .25rem;
+                padding: .5rem 1rem;
+                text-decoration: none;
+                font-weight: bold;
+                font-size: 40px;
+                color: white;
+                background: #000069;
+            }
+
+            a:hover {
+                background: white;
+                color: black;
+                transition: 0.3s;
+            }
+
+body {
+   font-size: 18px;
+}
+
+.grid {  
+  padding: 30px 300px 200px;
+  margin: 0 auto;
+  width: 500px;
+  background: #fff;
+  border: 1px solid #000069;
+  grid-template-columns: 150px 150px 150px;
+}
+
+
+.grid h4 {
+  font-family: 'Do Hyeon', sans-serif;
+  color: #000069;
+  font-size: 80px;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 0%;
+}
+
+.grid a {
+   font-family: 'Do Hyeon', sans-serif;
+  color: #333;
+  font-size: 30px;
+  text-align: center;
+  ;
+}
+
+#question {
+   font-family: 'Do Hyeon', sans-serif;
+  padding: 2em;
+  background: #000069;
+  border-radius: 15px;
+  font-size: 24px;
+  color: white;
+}
+
+#quiz {
+  text-align: center;
+}
+
+#progress {
+   font-family: 'Do Hyeon', sans-serif;
+  font-size: 20px;
+  color: #2b2b2b;
+  
+}
+
+.buttons {
+  padding: 0px 30px 20px 0px;
+  border: 2px solid none;
+  border-radius: 20px;
+}
+
+.btn {
+   font-family: 'Do Hyeon', sans-serif;
+  margin: 0px 0px 15px 0px;
+  padding: 10px;
+  width: 500px;
+  font-size: 20px;
+  color: #333;
+  background: white;
+  border: 2px solid black;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all .2s;
+}
+
+.btn:nth-child(2n) {
+  margin-right: 0;
+}
+
+.btn:hover {
+  background: #464646;
+  color: white;
+}
+#level{
+   font-family: 'Hahmlet', serif;
+   font-size: 30px;
+   text-align: center;
+}
+
+#background_1{
+   background-color: grey;
+}
+
+.resultBtn{
+   font-family: 'Do Hyeon', sans-serif;
+  margin: 0px 0px 15px 0px;
+  padding: 10px;
+  width: 100px;
+  font-size: 18px;
+  color: #333;
+  background: white;
+  border: 2px solid black;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all .2s;
+}
+
+.resultBtn:hover{
+   background-color: #000069;
+   color: white;
+}
+
+.answer_lst_wrap{
+   font-size: 30px;
+   text-align: center;
+   font-family: 'Do Hyeon', sans-serif;
+   background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 20px;
+}
+.answer_lst_wrap:after{
+   font-size: 30px;
+   content: '\002B';
+   color: white;
+   font-weight: bold;
+   float: right;
+   margin-left: 5px;
+   font-size: 30px;
+}
+
+.active:after {
+            content: "\2212";
+        }
+
+.ans{
+   padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+    </style>
+    <script>
+      function collapse(element) {
+          var before = document.getElementsByClassName("active")[0]               // 기존에 활성화된 버튼
+          if (before && document.getElementsByClassName("active")[0] != element) {  // 자신 이외에 이미 활성화된 버튼이 있으면
+              before.nextElementSibling.style.maxHeight = null;   // 기존에 펼쳐진 내용 접고
+              before.classList.remove("active");                  // 버튼 비활성화
+          }
+          element.classList.toggle("active");         // 활성화 여부 toggle
+
+          var content = element.nextElementSibling;
+          if (content.style.maxHeight != 0) {         // 버튼 다음 요소가 펼쳐져 있으면
+              content.style.maxHeight = null;         // 접기
+          } else {
+              content.style.maxHeight = content.scrollHeight + "px";  // 접혀있는 경우 펼치기
+          }
+      }
+  </script>
+  
+</head>
+<header>
+    <h1 href="index.html">한국어 수 표현 퀴즈 - CNU Linguistics</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">메인</a></li>
+            <li><a href="introduce.html">소개</a></li>
+            <li><a href="contact.html">문의</a></li>
+        </ul>
+    </nav>
+</header>
+<body>
+    <div class="grid">
+      
+        <h1 id="level">난이도 상</h1>
+        <div id="quiz">
+           <p id="question"></p>
+     
+           <div class="buttons">
+              <button class="btn"></button>
+              <button class="btn"></button>
+              <button class="btn"></button>
+           </div>
+           <footer>
+              <p id="progress">진행 정보</p>
+           </footer>
+        </div>
+     </div>
+     
+<!--퀴즈 관련 스크립트-->
+    <script>
+// 문제 객체(생성자 함수)
+function Question(text, choice, answer) {
+   this.text = text; // 질문 텍스트
+   this.choice = choice; // 선택할 답들(배열)
+   this.answer = answer; // 정답 정보
+}
+
+// 퀴즈 정보 객체
+function Quiz(questions) {
+   this.score = 0; // 점수
+   this.questions = questions; // 문제
+   this.questionIndex = 0; // 문제 번호
+   this.fail = [];
+   this.failQuest = [];
+   this.failAnswer = [];
+}
+
+
+// 정답 확인 메서드
+Quiz.prototype.correctAnswer = function(answer) {
+   return answer == one.answer;
+   }
+
+var questions = [
+////난이도 상////
+
+
+///큰 수 표현///
+new Question('다음 중 자연스러운 표현은?', ['아흔 명의 학생', '구십 명의 학생', '모두 자연스러움'], '모두 자연스러움'),
+new Question('다음 중 어색한 표현은?', ['칠십 잔의 와인', '공책 칠십 권', '일흔 분의 시간'], '일흔 분의 시간'),
+new Question('다음 중 어색한 표현은?', ['백이십 번째 손님', '백스무 번째 손님', '이번째 손님', '모두 어색함'], '이번째 손님'),
+
+
+
+///부정수 개념///
+new Question('\'오뉴월\'과 관련이 있는 숫자는?', ['6', '7', '8'], '6'),
+new Question('\'6~7\'을 나타내는 올바른 표현은?', ['오뉴월', '예닐곱', '여서일곱'], '예닐곱'),
+new Question('\'4~5\'와 관련이 없는 표현은?', ['네다섯 살', '학생 너덧', '덧난 상처', '네댓마리의 벼룩'], '덧난 상처'),
+new Question('\'말 두서너 마리\'가 나타내는 수의 범위는?', ['2~3', '3~4', '2~4'], '2~4'),
+new Question('\'사과 두어 개\'가 나타나는 수의 범위는?', ['2', '2~3', '2~8'], '2'),
+new Question('\'30\'이 들어갈 수 있는 표현은?', ['건물 수십 채', '건물 서너 채', '건물 삼백 채'], '건물 수십 채'),
+
+///특수한 상황에서만 쓰이는 수량사///
+new Question('다음 중 \'70\'과 관련이 없는 표현은?', ['할아버지의 칠순 잔치', '일흔 건의 부정행위', '십칠 세기의 역사'], '십칠 세기의 역사'),
+new Question('다음 중 \'6\'과 관련이 없는 표현은?', ['돼지고기 육 인분', '유월의 장미', '일고여덟 살쯤 먹은 아이'], '일고여덟 살쯤 먹은 아이'),
+new Question('다음 중 \'10\'과 관련이 없는 표현은?', ['시월의 어느 날', '화장실 여러 곳', '십원짜리 동전'], '여러 곳의 화장실'),
+new Question('다음 중 \'3\'과 관련이 없는 표현은?', ['보리 닷 되', '동전 서 푼', '쌀 석 톨'], '보리 닷 되'),
+new Question('다음 중 \'3\'과 관련이 없는 표현은?', ['삼촌', '삼수', '삼베'], '삼베'),
+new Question('다음 중 \'4\'와 관련이 없는 표현은?', ['사흘의 휴가', '높이 사 미터', '넉 달의 가뭄'], '사흘의 휴가'),
+new Question('다음 중 \'5\'와 관련이 있는 표현은?', ['첫 눈이 내렸다.', '온 마을이 떠들썩했다.', '주몽은 닷 되 크기의 알에서 태어났다.'], '주몽은 닷 되 크기의 알에서 태어났다.'),
+new Question('다음 중 \'40\'과 관련이 있는 표현은?', ['불혹의 나이', '나무 열네 그루', '너댓명의 사람'], '불혹의 나이'),
+new Question('다음 중 \'80\'과 관련이 있는 표현은?', ['십팔 세 청춘', '대여섯 쌍', '팔순의 노모'], '정답')
+];
+
+
+// 퀴즈 객체 생성
+var quiz = new Quiz(questions);
+var rand = Math.floor(Math.random() * questions.length)
+var one = quiz.questions[rand];
+questions.splice(rand, 1);
+
+// 문제 출력 함수
+function updateQuiz() {
+   var question = document.getElementById('question');
+   var idx = quiz.questionIndex + 1;
+   var choice = document.querySelectorAll('.btn');
+   rand = Math.floor(Math.random() * questions.length);
+   one = quiz.questions[rand];
+   questions.splice(rand, 1);
+
+   // 문제 출력
+   question.innerHTML = idx + ') ' + one.text;
+
+   // 선택지 출력
+   for (var i = 0; i < 3; i++) {
+      choice[i].innerHTML = one.choice[i];
+   }
+
+   progress();
+}
+
+// 진행상황 출력 함수
+function progress() {
+   var progress = document.getElementById("progress");
+   progress.innerHTML = '문제 ' + (quiz.questionIndex + 1) + '/ ' + '10';
+}
+
+var btn = document.querySelectorAll('.btn');
+
+// 입력 및 정답 확인 함수
+function checkAnswer(i) {
+   btn[i].addEventListener('click', function() {
+      var answer = btn[i].innerText;
+
+      if (quiz.correctAnswer(answer)) {;
+         quiz.score++;
+      } else {
+         quiz.fail.push(quiz.questionIndex + 1);
+         quiz.failQuest.push(one.text);
+         quiz.failAnswer.push(one.answer);
+      }
+
+      if ((quiz.questionIndex < quiz.questions.length - 1) && (quiz.questionIndex < 9)) {
+         quiz.questionIndex++;
+         updateQuiz();
+      } else {
+         result();
+      }
+   });
+}
+
+
+function result() {
+   var quizDiv = document.getElementById('quiz');
+   var per = parseInt((quiz.score * 100) / 10);
+   var txt = '<h4 id="score">'+per+'점</h4>';
+   var hund = '<h4 id="score">'+per+'점'+'</h4>';
+   quizDiv.innerHTML = txt;
+   
+   // 점수별 결과 텍스트
+   if (per == 100) {
+      hund+='<a>만점입니다!</a><br><a>다음 단계로 넘어갈까요?</a><hr>' + '<button type="button" class="resultBtn" onClick="location.href=\'index.html\'">홈으로</button>' + '&nbsp;&nbsp; <button type="button" class="resultBtn" onClick="location.href=\'high.html\'">다시풀기</button>'+'<br><button type="button" class="resultBtn" onClick="location.href=\'level.html\'">난이도 선택</button>' + '&nbsp;&nbsp;&nbsp;<button type="button" class="resultBtn" onClick="location.href=\'studyLevel.html\'">공부하기</button>'
+      quizDiv.innerHTML = hund;
+      
+   } else if (per == 90) {
+      txt+='<a>만점에 근접했습니다!</a><br><a>다시 시도하여 만점에 도전하세요!</a><hr>' + ' <button type="button" class="resultBtn" onClick="location.href=\'index.html\'">홈으로</button>' + '&nbsp;&nbsp; <button type="button" class="resultBtn" onClick="location.href=\'high.html\'">다시풀기</button>'+'<br><button type="button" class="resultBtn" onClick="location.href=\'level.html\'">난이도 선택</button>' + '&nbsp;&nbsp;&nbsp;<button type="button" class="resultBtn" onClick="location.href=\'studyLevel.html\'">공부하기</button>'+'<br><button type="button" class="answer_lst_wrap" onclick="collapse(this);>틀린 문제 다시 보기</button><div class="ans"><p> 틀린 문제<br><br>1. '+quiz.failQuest[0]+'</p><p>'+quiz.failAnswer[0]+'</p></div>'
+      quizDiv.innerHTML = txt;
+   }
+   else if (per == 80) {
+      txt+='<a>만점에 근접했습니다!</a><br><a>다시 시도하여 만점에 도전하세요!!</a><hr>' + ' <button type="button" class="resultBtn" onClick="location.href=\'index.html\'">홈으로</button>' + '&nbsp;&nbsp; <button type="button" class="resultBtn" onClick="location.href=\'high.html\'">다시풀기</button>'+'<br><button type="button" class="resultBtn" onClick="location.href=\'level.html\'">난이도 선택</button>' + '&nbsp;&nbsp;&nbsp;<button type="button" class="resultBtn" onClick="location.href=\'studyLevel.html\'">공부하기</button>'+ '<br><button type="button" class="answer_lst_wrap" onclick="collapse(this);>틀린 문제 다시 보기</button><div class="ans"><p>틀린 문제<br><br>1. '+quiz.failQuest[0]+'</p><p>'+quiz.failAnswer[0]+'</p><br><p>2. '+quiz.failQuest[1]+'</p><p>'+quiz.failAnswer[1]+'</p></div>'
+      quizDiv.innerHTML = txt;
+
+   }  else if (per == 70) {
+      txt+='<a>다소 아쉬운 점수입니다.</a><br><a>틀린 문제를 복습하고 만점에 도전하세요!</a><hr>' + ' <button type="button" class="resultBtn" onClick="location.href=\'index.html\'">홈으로</button>' + '&nbsp;&nbsp; <button type="button" class="resultBtn" onClick="location.href=\'high.html\'">다시풀기</button>'+'<br><button type="button" class="resultBtn" onClick="location.href=\'level.html\'">난이도 선택</button>' + '&nbsp;&nbsp;&nbsp;<button type="button" class="resultBtn" onClick="location.href=\'studyLevel.html\'">공부하기</button>'+ '<br><button type="button" class="answer_lst_wrap" onclick="collapse(this);>틀린 문제 다시 보기</button><div class="ans"><p>틀린 문제<br><br>1. '+quiz.failQuest[0]+'</p><p>'+quiz.failAnswer[0]+'</p><br><p>2. '+quiz.failQuest[1]+'</p><p>'+quiz.failAnswer[1]+'</p><br><p>3. '+quiz.failQuest[2]+'</p></div>'
+      quizDiv.innerHTML = txt;
+
+   } else if (per == 60) {
+      txt+='<a>다소 아쉬운 점수입니다.</a><br><a>틀린 문제를 복습하고 만점에 도전하세요!</a><hr>' + ' <button type="button" class="resultBtn" onClick="location.href=\'index.html\'">홈으로</button>' + '&nbsp;&nbsp; <button type="button" class="resultBtn" onClick="location.href=\'high.html\'">다시풀기</button>'+'<br><button type="button" class="resultBtn" onClick="location.href=\'level.html\'">난이도 선택</button>' + '&nbsp;&nbsp;&nbsp;<button type="button" class="resultBtn" onClick="location.href=\'studyLevel.html\'">공부하기</button>'+ '<br><button type="button" class="answer_lst_wrap" onclick="collapse(this);>틀린 문제 다시 보기</button><div class="ans"><p>틀린 문제<br><br>1. '+quiz.failQuest[0]+'</p><p>'+quiz.failAnswer[0]+'</p><br><p>2. '+quiz.failQuest[1]+'</p><p>'+quiz.failAnswer[1]+'</p><br><p>3. '+quiz.failQuest[2]+'</p><p>'+quiz.failAnswer[2]+'</p><br><p>4. '+quiz.failQuest[3]+'</p><p>'+quiz.failAnswer[3]+'</p></div>'
+      quizDiv.innerHTML = txt;
+
+   } else if (per == 50) {
+      txt+='<a>졸면서 푼건 아니죠?</a><br><a>틀린 문제를 복습하고 점수를 높여봅시다.</a><hr>' + ' <button type="button" class="resultBtn" onClick="location.href=\'index.html\'">홈으로</button>' + '&nbsp;&nbsp; <button type="button" class="resultBtn" onClick="location.href=\'high.html\'">다시풀기</button>'+'<br><button type="button" class="resultBtn" onClick="location.href=\'level.html\'">난이도 선택</button>' + '&nbsp;&nbsp;&nbsp;<button type="button" class="resultBtn" onClick="location.href=\'studyLevel.html\'">공부하기</button>'+'<br><button type="button" class="answer_lst_wrap" onclick="collapse(this);>틀린 문제 다시 보기</button><div class="ans"><p>틀린 문제<br><br>1. '+quiz.failQuest[0]+'</p><p>'+quiz.failAnswer[0]+'</p><br><p>2. '+quiz.failQuest[1]+'</p><p>'+quiz.failAnswer[1]+'</p><br><p>3. '+quiz.failQuest[2]+'</p><p>'+quiz.failAnswer[2]+'</p><br><p>4. '+quiz.failQuest[3]+'</p><p>'+quiz.failAnswer[3]+'</p><br><p>5. '+quiz.failQuest[4]+'</p><p>'+quiz.failAnswer[4]+'</p></div>'
+      quizDiv.innerHTML = txt;
+
+   } else if (per == 40) {
+      txt+='<a>졸면서 푼건 아니죠?</a><br><a>틀린 문제를 복습하고 점수를 높여봅시다.</a><hr>' + ' <button type="button" class="resultBtn" onClick="location.href=\'index.html\'">홈으로</button>' + '&nbsp;&nbsp; <button type="button" class="resultBtn" onClick="location.href=\'high.html\'">다시풀기</button>'+'<br><button type="button" class="resultBtn" onClick="location.href=\'level.html\'">난이도 선택</button>' + '&nbsp;&nbsp;&nbsp;<button type="button" class="resultBtn" onClick="location.href=\'studyLevel.html\'">공부하기</button>'+'<br><button type="button" class="answer_lst_wrap" onclick="collapse(this);>틀린 문제 다시 보기</button><div class="ans"><p>틀린 문제<br><br>1. '+quiz.failQuest[0]+'</p><p>'+quiz.failAnswer[0]+'</p><br><p>2. '+quiz.failQuest[1]+'</p><p>'+quiz.failAnswer[1]+'</p><br><p>3. '+quiz.failQuest[2]+'</p><p>'+quiz.failAnswer[2]+'</p><br><p>4. '+quiz.failQuest[3]+'</p><p>'+quiz.failAnswer[3]+'</p><br><p>5. '+quiz.failQuest[4]+'</p><p>'+quiz.failAnswer[4]+'</p><br><p>6. '+quiz.failQuest[5]+'</p><p>'+quiz.failAnswer[5]+'</p></div>'
+      quizDiv.innerHTML = txt;
+
+   }else if (per == 30) {
+      txt+='<a>포기란 배추셀 때 쓰는 말!.</a><br><a>문법을 공부하고 다시 한번 풀어보세요.</a><hr>' + ' <button type="button" class="resultBtn" onClick="location.href=\'index.html\'">홈으로</button>' + '&nbsp;&nbsp; <button type="button" class="resultBtn" onClick="location.href=\'high.html\'">다시풀기</button>'+'<br><button type="button" class="resultBtn" onClick="location.href=\'level.html\'">난이도 선택</button>' + '&nbsp;&nbsp;&nbsp;<button type="button" class="resultBtn" onClick="location.href=\'studyLevel.html\'">공부하기</button>'+'<br><button type="button" class="answer_lst_wrap" onclick="collapse(this);>틀린 문제 다시 보기</button><div class="ans"><p>틀린 문제<br><br>1. '+quiz.failQuest[0]+'</p><p>'+quiz.failAnswer[0]+'</p><br><p>2. '+quiz.failQuest[1]+'</p><p>'+quiz.failAnswer[1]+'</p><br><p>3. '+quiz.failQuest[2]+'</p><p>'+quiz.failAnswer[2]+'</p><br><p>4. '+quiz.failQuest[3]+'</p><p>'+quiz.failAnswer[3]+'</p><br><p>5. '+quiz.failQuest[4]+'</p><p>'+quiz.failAnswer[4]+'</p><br><p>6. '+quiz.failQuest[5]+'</p><p>'+quiz.failAnswer[5]+'</p><br><p>7. '+quiz.failQuest[6]+'</p><p>'+quiz.failAnswer[6]+'</p></div>'
+      quizDiv.innerHTML = txt;
+   } else if (per >= 20) {
+      txt+='<a>포기란 배추셀 때 쓰는 말!.</a><br><a>문법을 공부하고 다시 한번 풀어보세요.</a><hr>' + '<button type="button" class="resultBtn" onClick="location.href=\'index.html\'">홈으로</button>' + '&nbsp;&nbsp; <button type="button" class="resultBtn" onClick="location.href=\'high.html\'">다시풀기</button>'+'<br><button type="button" class="resultBtn" onClick="location.href=\'level.html\'">난이도 선택</button>' + '&nbsp;&nbsp;&nbsp;<button type="button" class="resultBtn" onClick="location.href=\'studyLevel.html\'">공부하기</button>'+ '<br><button type="button" class="answer_lst_wrap" onclick="collapse(this);>틀린 문제 다시 보기</button><div class="ans"><p>틀린 문제<br><br>1. '+quiz.failQuest[0]+'</p><p>'+quiz.failAnswer[0]+'</p><br><p>2. '+quiz.failQuest[1]+'</p><p>'+quiz.failAnswer[1]+'</p><br><p>3. '+quiz.failQuest[2]+'</p><p>'+quiz.failAnswer[2]+'</p><br><p>4. '+quiz.failQuest[3]+'</p><p>'+quiz.failAnswer[3]+'</p><p>'+quiz.failAnswer[3]+'</p><br><p>5. '+quiz.failQuest[4]+'</p><p>'+quiz.failAnswer[4]+'</p><br><p>6. '+quiz.failQuest[5]+'</p><p>'+quiz.failAnswer[5]+'</p><br><p>7. '+quiz.failQuest[6]+'</p><p>'+quiz.failAnswer[6]+'</p><br><p>8. '+quiz.failQuest[7]+'</p><p>'+quiz.failAnswer[7]+'</p></div>'
+      quizDiv.innerHTML = txt;
+   } else if (per == 10) {
+      txt+='<a>포기란 배추셀 때 쓰는 말!.</a><br><a>문법을 공부하고 다시 한번 풀어보세요.</a><hr>' + ' <button type="button" class="resultBtn" onClick="location.href=\'index.html\'">홈으로</button>' + '&nbsp;&nbsp; <button type="button" class="resultBtn" onClick="location.href=\'high.html\'">다시풀기</button>'+'<br><button type="button" class="resultBtn" onClick="location.href=\'level.html\'">난이도 선택</button>' + '&nbsp;&nbsp;&nbsp;<button type="button" class="resultBtn" onClick="location.href=\'studyLevel.html\'">공부하기</button>'+'<br><button type="button" class="answer_lst_wrap" onclick="collapse(this);>틀린 문제 다시 보기</button><div class="ans"><p>틀린 문제<br><br>1. '+quiz.failQuest[0]+'</p><p>'+quiz.failAnswer[0]+'</p><br><p>2. '+quiz.failQuest[1]+'</p><p>'+quiz.failAnswer[1]+'</p><br><p>3. '+quiz.failQuest[2]+'</p><p>'+quiz.failAnswer[2]+'</p><br><p>4. '+quiz.failQuest[3]+'</p><p>'+quiz.failAnswer[3]+'</p><br><p>5. '+quiz.failQuest[4]+'</p><p>'+quiz.failAnswer[4]+'</p><br><p>6. '+quiz.failQuest[5]+'</p><p>'+quiz.failAnswer[5]+'</p><br><p>7. '+quiz.failQuest[6]+'</p><p>'+quiz.failAnswer[6]+'</p><br><p>8. '+quiz.failQuest[7]+'</p><p>'+quiz.failAnswer[7]+'</p><br><p>9. '+quiz.failQuest[8]+'</p><p>'+quiz.failAnswer[8]+'</p></div>'
+      quizDiv.innerHTML = txt;
+   } else if (per == 0) {
+      txt+='<a>포기란 배추셀 때 쓰는 말!.</a><br><a>문법을 공부하고 다시 한번 풀어보세요.</a><hr>' + ' <button type="button" class="resultBtn" onClick="location.href=\'index.html\'">홈으로</button>' + '&nbsp;&nbsp; <button type="button" class="resultBtn" onClick="location.href=\'high.html\'">다시풀기</button>'+'<br><button type="button" class="resultBtn" onClick="location.href=\'level.html\'">난이도 선택</button>' + '&nbsp;&nbsp;&nbsp;<button type="button" class="resultBtn" onClick="location.href=\'studyLevel.html\'">공부하기</button>'+'<br><button type="button" class="answer_lst_wrap" onclick="collapse(this);>틀린 문제 다시 보기</button><div class="ans"><p>틀린 문제<br><br>1. '+quiz.failQuest[0]+'</p><p>'+quiz.failAnswer[0]+'</p><br><p>2. '+quiz.failQuest[1]+'</p><p>'+quiz.failAnswer[1]+'</p><br><p>3. '+quiz.failQuest[2]+'</p><p>'+quiz.failAnswer[2]+'</p><br><p>4. '+quiz.failQuest[3]+'</p><p>'+quiz.failAnswer[3]+'</p><br><p>5. '+quiz.failQuest[4]+'</p><p>'+quiz.failAnswer[4]+'</p><br><p>6. '+quiz.failQuest[5]+'</p><p>'+quiz.failAnswer[5]+'</p><br><p>7. '+quiz.failQuest[6]+'</p><p>'+quiz.failAnswer[6]+'</p><br><p>8. '+quiz.failQuest[7]+'</p><p>'+quiz.failAnswer[7]+'</p><br><p>9. '+quiz.failQuest[8]+'</p><p>'+quiz.failAnswer[8]+'</p><br><p>10. '+quiz.failQuest[9]+'</p><p>'+quiz.failAnswer[9]+'</p></div>'
+      quizDiv.innerHTML = txt;
+   }
+}
+
+
+for (var i = 0; i < btn.length; i++) {
+   checkAnswer(i);
+}
+
+updateQuiz();
+
+    </script>
+</body>
+</html>
